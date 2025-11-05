@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STEM AI Quiz Challenge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #2563eb, #f97316);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+      color: #1e293b;
+    }
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 500px;
+      text-align: center;
+    }
+    h1 { font-size: 1.8rem; margin-bottom: .5rem; color: #2563eb; }
+    #score { font-weight: 700; color: #f97316; font-size: 1.1rem; margin-bottom: 1rem; }
+
+    .question {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 1.5rem 0;
+      color: #1e40af;
+    }
+
+    .options {
+      display: grid;
+      gap: .8rem;
+      margin: 1rem 0;
+    }
+    .option {
+      background: #f1f5f9;
+      border: 2px solid #cbd5e1;
+      padding: 1rem;
+      border-radius: .6rem;
+      cursor: pointer;
+      transition: all .2s;
+      font-size: 1rem;
+    }
+    .option:hover { background: #e0f2fe; border-color: #0ea5e9; }
+    .option.correct { background: #dcfce7; border-color: #10b981; }
+    .option.wrong { background: #fee2e2; border-color: #ef4444; }
+
+    .feedback {
+      margin: 1.5rem 0;
+      padding: 1.2rem;
+      border-radius: .8rem;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      text-align: left;
+      font-size: .95rem;
+      line-height: 1.6;
+      min-height: 80px;
+    }
+    .feedback strong { color: #1e40af; }
+    .feedback .why { color: #dc2626; font-style: italic; margin: 0.5rem 0; }
+    .feedback .correct-ans { color: #16a34a; font-weight: 600; margin: 0.8rem 0 0.4rem; }
+    .hidden { display: none; }
+
+    button {
+      background: #10b981; color: white; border: none;
+      padding: .8rem 1.5rem; margin: 1rem .3rem 0;
+      border-radius: .5rem; font-weight: 600;
+      cursor: pointer; transition: .2s;
+    }
+    button:hover { background: #059669; transform: translateY(-2px); }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>STEM AI Quiz Challenge</h1>
+    <div id="score">Score: 0 / 0</div>
+
+    <div class="question" id="question">Loading...</div>
+
+    <div class="options" id="options"></div>
+
+    <div id="feedback" class="feedback hidden"></div>
+
+    <button id="nextBtn" onclick="nextQuestion()" class="hidden">Next Question</button>
+  </div>
+
+  <script>
+    const quiz = [
+      {
+        question: "What is Machine Learning?",
+        options: [
+          "Programming robots to move",
+          "Teaching computers to learn from data",
+          "Making AI think like humans",
+          "Storing data in the cloud"
+        ],
+        correct: 1,
+        whyWrong: [
+          "Robots need code, not learning.",
+          "", // This is correct
+          "That's AGI, not ML.",
+          "Cloud is storage, not learning."
+        ],
+        explanation: "ML lets systems improve from experience without being explicitly programmed."
+      },
+      {
+        question: "Which is an example of Bias in AI?",
+        options: [
+          "A model that predicts weather",
+          "A hiring tool that favors men due to past data",
+          "A chatbot that answers questions",
+          "A game that uses AI to play chess"
+        ],
+        correct: 1,
+        whyWrong: [
+          "Weather models can be biased too, but not here.",
+          "", // correct
+          "Chatbots can be biased in language.",
+          "Chess AI follows rules."
+        ],
+        explanation: "Bias occurs when training data reflects historical inequality, leading to unfair outcomes."
+      },
+      {
+        question: "What does 'Deep Learning' use?",
+        options: [
+          "Simple if-else rules",
+          "Multi-layered neural networks",
+          "Only text data",
+          "Human supervision at every step"
+        ],
+        correct: 1,
+        whyWrong: [
+          "That's basic programming.",
+          "", // correct
+          "Text is one type, but not required.",
+          "Deep learning is mostly unsupervised."
+        ],
+        explanation: "Deep Learning uses many layers of artificial neurons to detect complex patterns."
+      },
+      {
+        question: "Why do we need Human-Centered AI?",
+        options: [
+          "To make AI faster",
+          "To ensure AI serves people fairly and safely",
+          "To replace teachers",
+          "To win AI competitions"
+        ],
+        correct: 1,
+        whyWrong: [
+          "Speed is engineering.",
+          "", // correct
+          "AI should support, not replace.",
+          "Competitions are not the goal."
+        ],
+        explanation: "Human-Centered AI prioritizes ethics, inclusion, and real-world impact."
+      }
+    ];
+
+    let current = 0;
+    let score = 0;
+    const total = quiz.length;
+
+    function loadQuestion() {
+      const q = quiz[current];
+      document.getElementById("question").textContent = q.question;
+      const optionsDiv = document.getElementById("options");
+      optionsDiv.innerHTML = "";
+      q.options.forEach((opt, i) => {
+        const div = document.createElement("div");
+        div.className = "option";
+        div.innerHTML = `<strong>${String.fromCharCode(65 + i)}.</strong> ${opt}`;
+        div.onclick = () => selectAnswer(i);
+        optionsDiv.appendChild(div);
+      });
+      document.getElementById("feedback").classList.add("hidden");
+      document.getElementById("nextBtn").classList.add("hidden");
+      updateScore();
+    }
+
+    function selectAnswer(selected) {
+      const q = quiz[current];
+      const options = document.querySelectorAll(".option");
+      const feedback = document.getElementById("feedback");
+      const nextBtn = document.getElementById("nextBtn");
+
+      options.forEach(o => o.style.pointerEvents = "none");
+
+      let feedbackHTML = "";
+
+      if (selected === q.correct) {
+        options[selected].classList.add("correct");
+        feedbackHTML = `
+          <strong style="color:#16a34a;">Correct! +1 point</strong><br>
+          ${q.explanation}
+        `;
+        score++;
+      } else {
+        options[selected].classList.add("wrong");
+        options[q.correct].classList.add("correct");
+        const why = q.whyWrong[selected] || "That's not quite right.";
+        feedbackHTML = `
+          <strong style="color:#dc2626;">Not quite.</strong><br>
+          <div class="why">"${why}"</div>
+          <div class="correct-ans">
+            <strong>Correct Answer:</strong><br>
+            <strong>${String.fromCharCode(65 + q.correct)}.</strong> ${q.options[q.correct]}
+          </div>
+          <br>${q.explanation}
+        `;
+      }
+
+      feedback.innerHTML = feedbackHTML;
+      feedback.classList.remove("hidden");
+      nextBtn.classList.remove("hidden");
+      updateScore();
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current >= total) {
+        showFinalScore();
+      } else {
+        loadQuestion();
+      }
+    }
+
+    function showFinalScore() {
+      const percentage = Math.round((score / total) * 100);
+      let message = "";
+      if (score === total) message = "Perfect! You're an AI Architect!";
+      else if (score >= total * 0.75) message = "Excellent! Almost there.";
+      else if (score >= total * 0.5) message = "Good effort! Keep learning.";
+      else message = "Let's review and try again!";
+
+      document.querySelector(".container").innerHTML = `
+        <h1>Quiz Complete!</h1>
+        <p style="font-size:2rem; color:#10b981; font-weight:700; margin:1rem 0;">
+          ${score} / ${total} (${percentage}%)
+        </p>
+        <p style="font-size:1.1rem; margin:1rem 0;">${message}</p>
+        <button onclick="location.reload()" style="background:#2563eb;">Play Again</button>
+      `;
+    }
+
+    function updateScore() {
+      document.getElementById("score").textContent = `Score: ${score} / ${total}`;
+    }
+
+    loadQuestion();
+  </script>
+
+</body>
+</html>
