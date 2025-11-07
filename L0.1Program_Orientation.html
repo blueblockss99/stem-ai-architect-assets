@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certified STEM AI Architect™ Program</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #eef2ff; }
+        .accordion-header {
+            cursor: pointer;
+            transition: background-color 0.2s, box-shadow 0.2s;
+        }
+        .accordion-header:hover {
+            background-color: #e0f7fa; /* Light teal hover */
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+        }
+        .accordion-content.open {
+            max-height: 1200px; /* Large enough value to contain content */
+            padding-top: 1rem;
+        }
+        .rotated-icon {
+            transform: rotate(90deg);
+            transition: transform 0.3s;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-10">
+
+<div class="max-w-5xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+
+    <!-- HEADER: Program Title & Mission -->
+    <header class="bg-gradient-to-r from-teal-600 to-indigo-700 text-white p-8 md:p-12">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-2">
+            Certified STEM AI Architect™
+        </h1>
+        <p class="text-teal-200 text-xl md:text-2xl font-light">
+            Designed to help educators lead cross-domain AI education.
+        </p>
+        <p class="mt-4 text-sm bg-black bg-opacity-10 p-3 rounded-lg max-w-3xl">
+            Our mission: Build mentors who make AI <span class="font-semibold text-teal-100">human-centered, creative, and purposeful</span> in every classroom and industry.
+        </p>
+    </header>
+
+    <div class="p-6 md:p-10 space-y-12">
+
+        <!-- SECTION 1: Onboarding Purpose & Learning Objectives -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 border-b pb-8 border-gray-100">
+            <!-- Purpose Card -->
+            <div class="lg:col-span-1 p-6 bg-indigo-50 rounded-xl shadow-lg h-full">
+                <h2 class="text-2xl font-bold text-indigo-700 mb-3 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M10 21h4a2 2 0 002-2v-4a2 2 0 00-2-2h-4a2 2 0 00-2 2v4a2 2 0 002 2z" />
+                    </svg>
+                    Lesson Purpose
+                </h2>
+                <p class="text-gray-700 leading-relaxed">
+                    This opening lesson helps you get <span class="font-semibold">oriented</span> inside STEM AI Studio: navigate the platform, join the community, subscribe to the calendar, and complete your onboarding checklist.
+                </p>
+            </div>
+
+            <!-- Objectives Checklist -->
+            <div class="lg:col-span-2 p-6 bg-teal-50 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold text-teal-700 mb-4 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Learning Objectives
+                </h2>
+                <ul class="space-y-3 text-gray-700 text-base">
+                    <li class="flex items-start"><span class="text-teal-500 font-bold mr-2 mt-0.5">✓</span> Navigate the TrainerCentral learning platform confidently.</li>
+                    <li class="flex items-start"><span class="text-teal-500 font-bold mr-2 mt-0.5">✓</span> Join and participate in the Discord community.</li>
+                    <li class="flex items-start"><span class="text-teal-500 font-bold mr-2 mt-0.5">✓</span> Subscribe to the Program Calendar for updates.</li>
+                    <li class="flex items-start"><span class="text-teal-500 font-bold mr-2 mt-0.5">✓</span> Complete the Onboarding Checklist (accounts, policies, diagnostic, profile).</li>
+                    <li class="flex items-start"><span class="text-teal-500 font-bold mr-2 mt-0.5">✓</span> Post a short introduction to the community (#introductions).</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- SECTION 2: Program Snapshot & Specializations -->
+        <section class="border-b pt-4 pb-8 border-gray-100">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                </svg>
+                Program Snapshot
+            </h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-200 shadow-md transform hover:scale-105 transition duration-300">
+                    <div class="text-lg font-extrabold text-indigo-600">Duration</div>
+                    <p class="text-sm mt-1 text-gray-600">12–16 wks (Std) | 6–8 wks (Fast)</p>
+                </div>
+                
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-200 shadow-md transform hover:scale-105 transition duration-300">
+                    <div class="text-lg font-extrabold text-indigo-600">Mentorship</div>
+                    <p class="text-sm mt-1 text-gray-600">Dual-Mentor Model (Architect + SME)</p>
+                </div>
+                
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-200 shadow-md transform hover:scale-105 transition duration-300">
+                    <div class="text-lg font-extrabold text-indigo-600">Outcome</div>
+                    <p class="text-sm mt-1 text-gray-600">Certified Credential + 3 Badges</p>
+                </div>
+
+                <div class="p-4 bg-gray-50 rounded-xl border border-gray-200 shadow-md transform hover:scale-105 transition duration-300">
+                    <div class="text-lg font-extrabold text-indigo-600">Network</div>
+                    <p class="text-sm mt-1 text-gray-600">Capstone Project & International Network</p>
+                </div>
+
+            </div>
+
+            <div class="mt-6">
+                <h3 class="font-bold text-gray-800 mb-3 text-lg">Specializations:</h3>
+                <div class="flex flex-wrap gap-3 text-sm">
+                    <span class="bg-indigo-200 text-indigo-900 px-4 py-2 rounded-full font-medium hover:bg-indigo-300 transition duration-150">AI + Medicine</span>
+                    <span class="bg-indigo-200 text-indigo-900 px-4 py-2 rounded-full font-medium hover:bg-indigo-300 transition duration-150">AI + Engineering</span>
+                    <span class="bg-indigo-200 text-indigo-900 px-4 py-2 rounded-full font-medium hover:bg-indigo-300 transition duration-150">AI + Business & Finance</span>
+                    <span class="bg-indigo-200 text-indigo-900 px-4 py-2 rounded-full font-medium hover:bg-indigo-300 transition duration-150">AI + Arts</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 3: AI Tool Stack (Interactive Accordion) -->
+        <section class="pt-4">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Program Tool Stack
+            </h2>
+            
+            <!-- Accordion 1: Core Tool Stack -->
+            <div class="rounded-lg border border-teal-300 shadow-lg mb-4">
+                <div id="header-core" class="accordion-header flex justify-between items-center p-5 bg-teal-100 rounded-t-lg">
+                    <h3 class="text-xl font-semibold text-teal-800">Core AI Tools (Foundational)</h3>
+                    <span class="icon-core text-2xl font-bold text-teal-600 transition duration-300">+</span>
+                </div>
+                <div id="content-core" class="accordion-content p-0">
+                    <div class="p-5">
+                        <p class="text-sm text-gray-600 italic mb-4">These tools form the basis of all AI concepts taught in the program.</p>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-teal-50">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-semibold text-teal-700 uppercase tracking-wider w-1/5">Category</th>
+                                        <th class="px-4 py-3 text-left text-xs font-semibold text-teal-700 uppercase tracking-wider w-1/5">Tool</th>
+                                        <th class="px-4 py-3 text-left text-xs font-semibold text-teal-700 uppercase tracking-wider w-3/5">Purpose</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-100 text-sm text-gray-800">
+                                    <tr><td class="px-4 py-3 font-medium">Creative Coding Foundations</td><td>Scratch</td><td>Visual logic, simulation, storytelling with variables & events.</td></tr>
+                                    <tr><td class="px-4 py-3 font-medium">AI Writing & Prompting</td><td>ChatGPT / Gemini / Copilot / Claude</td><td>Core prompt engineering, ethics reflection, scenario design.</td></tr>
+                                    <tr><td class="px-4 py-3 font-medium">No-Code ML / AI Models</td><td>Teachable Machine</td><td>Image, sound, and pose classification — hands-on AI logic.</td></tr>
+                                    <tr><td class="px-4 py-3 font-medium">Visual & Creative Design</td><td>Canva</td><td>Lesson visuals, certificates, portfolios, and storytelling.</td></tr>
+                                    <tr><td class="px-4 py-3 font-medium">Data Visualization</td><td>Datawrapper</td><td>Quick, ethical data charts and dashboards.</td></tr>
+                                    <tr><td class="px-4 py-3 font-medium">Multimodal / Generative AI</td><td>Gemini</td><td>Text-image-code exploration for creative AI activities.</td></tr>
+                                    <tr><td class="px-4 py-3 font-medium">AI Explainability</td><td>Google’s What-If Tool (lite)</td><td>"What if I change this input?" — demystifies black boxes.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion 2: Domain-Specific Tools -->
+            <div class="rounded-lg border border-indigo-300 shadow-lg">
+                <div id="header-domain" class="accordion-header flex justify-between items-center p-5 bg-indigo-100 rounded-t-lg">
+                    <h3 class="text-xl font-semibold text-indigo-800">Domain-Specific Tools (Specializations)</h3>
+                    <span class="icon-domain text-2xl font-bold text-indigo-600 transition duration-300">+</span>
+                </div>
+                <div id="content-domain" class="accordion-content p-0">
+                    <div class="p-5">
+                        <p class="text-sm text-gray-600 italic mb-4">These tools are explored later, based on your chosen specialization path.</p>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead class="bg-indigo-50">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-semibold text-indigo-700 uppercase tracking-wider w-1/5">Domain Path</th>
+                                        <th class="px-4 py-3 text-left text-xs font-semibold text-indigo-700 uppercase tracking-wider w-1/5">Optional Tools</th>
+                                        <th class="px-4 py-3 text-left text-xs font-semibold text-indigo-700 uppercase tracking-wider w-3/5">Purpose / Why Include</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="bg-white divide-y divide-gray-100 text-sm text-gray-800">
+                                    <!-- AI + Medicine -->
+                                    <tr class="bg-white"><td class="px-4 py-3 font-medium">AI + Medicine</td><td>Google Colab / Kaggle (lite mode)</td><td>Explore healthcare datasets or explainable AI examples.</td></tr>
+                                    <tr class="bg-white"><td></td><td>BioRender / MedSims</td><td>Create visuals for anatomy, disease mapping, or health AI ethics posters.</td></tr>
+
+                                    <!-- AI + Engineering -->
+                                    <tr class="bg-gray-50"><td class="px-4 py-3 font-medium">AI + Engineering</td><td>Lobe.ai (Microsoft)</td><td>Drag-and-drop ML for sensors, control logic, and image classification.</td></tr>
+                                    <tr class="bg-gray-50"><td></td><td>ThingSpeak / Tinkercad Circuits</td><td>Simple IoT data feeds and simulation of engineering systems.</td></tr>
+
+                                    <!-- AI + Business & Finance -->
+                                    <tr class="bg-white"><td class="px-4 py-3 font-medium">AI + Business & Finance</td><td>Google Sheets + AI Add-ons (Copilot)</td><td>Forecasting, ethical pricing simulations, and dashboards.</td></tr>
+                                    <tr class="bg-white"><td></td><td>Glide Apps / Notion AI</td><td>No-code app demos for business logic or finance calculators.</td></tr>
+
+                                    <!-- AI + Arts -->
+                                    <tr class="bg-gray-50"><td class="px-4 py-3 font-medium">AI + Arts</td><td>Runway ML / Pika Labs / DALL·E</td><td>AI video, image, and audio generation for creative storytelling.</td></tr>
+                                    <tr class="bg-gray-50"><td></td><td>Soundful / Mubert</td><td>AI music generation for performances or soundscapes.</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 4: Community & Activity -->
+        <section class="border-t pt-8 border-gray-200 grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20h-2m2 0h-2M15 4h-3a4 4 0 100 8h3m1-1v2m-1-2v2m-2 2h2" />
+                    </svg>
+                    Community Guidelines
+                </h3>
+                <div class="space-y-4">
+                    <p class="text-gray-700"><strong>Main Channels:</strong> TrainerCentral Discussion Chats & Discord Community.</p>
+                    <h4 class="font-semibold text-gray-800 mt-3">Community Norms:</h4>
+                    <ul class="text-gray-700 list-disc list-inside ml-4 space-y-1 text-sm">
+                        <li>Be respectful and supportive.</li>
+                        <li>Protect privacy of peers and participants.</li>
+                        <li>Use school-safe examples.</li>
+                        <li>Credit sources appropriately.</li>
+                        <li>Encourage creativity and constructive feedback.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="p-6 bg-red-50 rounded-xl border border-red-200 shadow-lg h-full">
+                <h3 class="text-2xl font-bold text-red-700 mb-4 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                    </svg>
+                    Onboarding Activity
+                </h3>
+                <p class="text-gray-700 mb-4">
+                    <span class="font-bold">Task:</span> Post a short introduction in the community discussion forum using the template below.
+                </p>
+                <div class="p-3 bg-white border border-gray-300 rounded-lg text-sm italic text-gray-600 mb-4">
+                    “Hi everyone! I’m [Name] from [Location/Grade Level]. Path: [Specialization]. I believe AI can help students [Goal]. Excited to try [Tool]!”
+                </div>
+                <p class="font-bold text-red-800">
+                    <span class="font-bold">Final Step:</span> Acknowledge the Code of Conduct & AI Ethics Pledge, then mark this lesson as complete.
+                </p>
+            </div>
+
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-gray-300 p-4 text-center text-sm border-t border-gray-700">
+        &copy; STEM AI Studio Inc. (Canada) | Program Information Protocol V.0.9
+    </footer>
+
+</div>
+
+<script>
+    /**
+     * JavaScript for interactive accordion sections (tool stacks).
+     * This makes the page interactive without needing external libraries.
+     */
+    function setupAccordion(headerId, contentId, iconClass) {
+        const header = document.getElementById(headerId);
+        const content = document.getElementById(contentId);
+        const icon = document.querySelector(`.${iconClass}`);
+
+        header.addEventListener('click', () => {
+            const isOpen = content.classList.contains('open');
+
+            // Close all other accordions (optional, but cleaner)
+            document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+            document.querySelectorAll('.accordion-header').forEach(h => h.classList.remove('shadow-xl'));
+            document.querySelectorAll(`[class^="icon-"]`).forEach(i => i.textContent = '+');
+
+
+            if (!isOpen) {
+                // Open the current one
+                content.classList.add('open');
+                header.classList.add('shadow-xl');
+                icon.textContent = '–'; // Change icon to minus
+            } else {
+                // Close the current one (already done above, but for clarity)
+                content.classList.remove('open');
+                header.classList.remove('shadow-xl');
+                icon.textContent = '+';
+            }
+        });
+    }
+
+    // Initialize both accordions
+    setupAccordion('header-core', 'content-core', 'icon-core');
+    setupAccordion('header-domain', 'content-domain', 'icon-domain');
+
+</script>
+
+</body>
+</html>
