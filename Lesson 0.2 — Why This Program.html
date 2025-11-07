@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 0.2 — Why This Program?</title>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Apply the Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F0F0; /* stem-bg */
+        }
+        /* Custom scrollbar for aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #FF5733; /* Sunset Orange */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e0e0e0;
+        }
+        /* Styling for the custom checklist */
+        .custom-check:checked + div {
+            border-color: #32CD32;
+            background-color: #32CD32;
+        }
+        .custom-check:checked + div svg {
+            opacity: 1;
+        }
+        /* Style for interactive philosophy cards */
+        .philosophy-card {
+            transition: all 0.2s ease-in-out;
+        }
+        .philosophy-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+
+    <script>
+        // Tailwind Configuration using the exact STEM AI Studio color palette
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'stem-blue': '#007BFF',      // Primary: Electric Blue
+                        'stem-orange': '#FF5733',    // Secondary: Sunset Orange
+                        'stem-green': '#32CD32',     // Accent: Lime Green
+                        'stem-purple': '#9B30FF',    // Creative Pop: Vivid Purple
+                        'stem-bg': '#F0F0F0',        // Background: Light Gray
+                        'text-primary': '#000000',   // Text: Black
+                        'text-alt': '#FFFFFF',       // Text: White
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased text-text-primary">
+
+    <div id="app" class="max-w-4xl mx-auto p-4 sm:p-6 lg:p-10">
+
+        <!-- Main Header Banner (Vivid Purple to Electric Blue) -->
+        <header class="bg-gradient-to-r from-stem-purple to-stem-blue text-text-alt p-6 sm:p-8 rounded-2xl shadow-xl mb-10">
+            <p class="text-sm font-semibold opacity-80 mb-1">PROGRAM ORIENTATION</p>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+                Lesson 0.2 — Why This Program?
+            </h1>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="space-y-12">
+
+            <!-- The Big Picture -->
+            <section class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-orange">
+                <h2 class="text-2xl font-bold text-stem-orange mb-3 flex items-center">
+                    <!-- SVG: Globe -->
+                    <svg class="w-6 h-6 mr-3 text-stem-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5m-16.5 6h16.5m-16.5 6h16.5m-13.5 6V3m6 18V3m6 18V3m-18 6h18m-18 6h18m-18 6h18"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                    The Big Picture: Why STEM AI Studio Exists
+                </h2>
+                <p class="mb-4 text-gray-700">
+                    Artificial Intelligence is reshaping the world faster than most classrooms can keep up. Students are curious, but educators often feel underprepared — not because they lack talent, but because AI has been taught as code, not as context.
+                </p>
+                <p class="font-semibold text-stem-blue">
+                    STEM AI Studio Inc. (Canada) created the Certified STEM AI Architect™ Program to close this gap. It empowers educators, STEM graduates, and professionals to teach and lead cross-domain AI education — confidently connecting Computer Science principles with real-world applications in Medicine, Engineering, Business & Finance, and the Arts.
+                </p>
+                <p class="mt-4 italic text-gray-600">
+                    Our mission: to make AI literacy creative, human-centered, and globally accessible — one mentor, one classroom, one project at a time.
+                </p>
+            </section>
+
+            <!-- The Challenge We’re Solving -->
+            <section class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-blue">
+                <h2 class="text-2xl font-bold text-stem-blue mb-3 flex items-center">
+                    <!-- SVG: Lightbulb -->
+                    <svg class="w-6 h-6 mr-3 text-stem-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-3-3v6m-3-7a7 7 0 1014 0A7 7 0 0012 5zm0-4v2M3.5 7.5l1.4 1.4M20.5 7.5l-1.4 1.4"></path></svg>
+                    The Challenge We’re Solving
+                </h2>
+                <p class="mb-4 text-gray-700">
+                    Traditional AI training often misses the mark for educators:
+                    <ul class="list-disc ml-6 mt-2 space-y-1 text-gray-700">
+                        <li>It focuses on code, not classroom creativity.</li>
+                        <li>It intimidates non-technical teachers instead of inspiring them.</li>
+                        <li>It forgets that AI is a human story, not just a technical one.</li>
+                    </ul>
+                </p>
+                <p class="font-semibold text-stem-purple mt-4">
+                    The Certified STEM AI Architect™ Program changes that narrative. It helps educators become curators of curiosity, translators between disciplines, and leaders of ethical, creative AI learning.
+                </p>
+            </section>
+
+            <!-- The New Role of the AI Educator -->
+            <section class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-orange">
+                <h2 class="text-2xl font-bold text-stem-orange mb-3 flex items-center">
+                    <!-- SVG: Compass -->
+                    <svg class="w-6 h-6 mr-3 text-stem-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.828 12.97a3.536 3.536 0 005-5L14.71 5.378a5 5 0 00-7.07 7.07l1.414 1.414z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 100-18 9 9 0 000 18z"></path></svg>
+                    The New Role of the AI Educator
+                </h2>
+                <p class="mb-4 italic text-gray-600">
+                    You’re not here to become a data scientist — you’re here to become a mentor of AI literacy.
+                </p>
+                <div class="grid sm:grid-cols-2 gap-4 text-gray-700">
+                    <div class="p-3 bg-stem-orange/10 rounded-lg">
+                        <span class="font-bold text-stem-orange block mb-1">Translate AI concepts</span> into age-appropriate, creative lessons.
+                    </div>
+                    <div class="p-3 bg-stem-orange/10 rounded-lg">
+                        <span class="font-bold text-stem-orange block mb-1">Lead projects</span> that connect technology with empathy, ethics, and real-world meaning.
+                    </div>
+                    <div class="p-3 bg-stem-orange/10 rounded-lg">
+                        <span class="font-bold text-stem-orange block mb-1">Mentor students</span> in responsible and purposeful AI use.
+                    </div>
+                    <div class="p-3 bg-stem-orange/10 rounded-lg">
+                        <span class="font-bold text-stem-orange block mb-1">Collaborate across disciplines</span> to make AI learning relevant and inspiring.
+                    </div>
+                </div>
+            </section>
+            
+            <!-- How This Program Was Designed & Developed -->
+            <section class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-purple">
+                <h2 class="text-2xl font-bold text-stem-purple mb-4 flex items-center">
+                    <!-- SVG: Atom (for foundational structure) -->
+                    <svg class="w-6 h-6 mr-3 text-stem-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><circle cx="12" cy="12" r="2"></circle><path stroke-linecap="round" stroke-linejoin="round" d="M14.71 7.29l1.41-1.41M12 21a9 9 0 000-18 9 9 0 000 18zm0 0a9 9 0 01-9-9 9 9 0 019-9m0 18a9 9 0 009-9 9 9 0 00-9-9"></path></svg>
+                    How This Program Was Designed & Developed
+                </h2>
+                <p class="mb-6 text-gray-700">
+                    The Certified STEM AI Architect™ Program was created by STEM AI Studio Inc. (Canada) using a research-driven, educator-first design process. Every module, tool, and project was carefully developed to balance academic depth, creativity, and mentorship.
+                </p>
+
+                <div class="space-y-4">
+                    <!-- Point 1 -->
+                    <div class="border-l-4 border-stem-blue pl-3">
+                        <h3 class="font-bold text-stem-blue text-lg">1. Research-Driven Foundations</h3>
+                        <p class="text-gray-700">Built on global AI literacy frameworks — UNESCO, ISTE, and AI4K12 guidelines. Designed through pilot testing with educators, STEM professionals, and AI mentors.</p>
+                    </div>
+                    <!-- Point 2 -->
+                    <div class="border-l-4 border-stem-blue pl-3">
+                        <h3 class="font-bold text-stem-blue text-lg">2. Built for Real Educators</h3>
+                        <p class="text-gray-700">Created for teachers and professionals who may have no coding experience. Prioritizes “teach-with-AI” skills — classroom management, creativity, and ethical facilitation.</p>
+                    </div>
+                    <!-- Point 3 -->
+                    <div class="border-l-4 border-stem-blue pl-3">
+                        <h3 class="font-bold text-stem-blue text-lg">3. Dual-Mentor Development Model</h3>
+                        <p class="text-gray-700">Every module co-designed by AI Architect Mentors and Industry SMEs (Subject Matter Experts) to ensure a perfect balance between pedagogy and authenticity.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- How You Will Learn (Table/Grid) -->
+            <section class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-orange">
+                <h2 class="text-2xl font-bold text-stem-orange mb-4 flex items-center">
+                    <!-- SVG: Graduation Cap -->
+                    <svg class="w-6 h-6 mr-3 text-stem-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0v10m0 0l-9-5m9 5l9-5m-9-5L3 8m18 0l-9 5"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 4l9 5-9 5-9-5 9-5z"></path></svg>
+                    How You Will Learn
+                </h2>
+                <p class="mb-6 italic text-gray-600">
+                    This is not a lecture-based course — it’s a mentor-guided journey combining creativity, reflection, and real-world problem-solving.
+                </p>
+
+                <!-- Responsive Table Structure -->
+                <div class="text-sm">
+                    <!-- Header Row -->
+                    <div class="grid grid-cols-3 bg-stem-orange text-text-alt font-bold p-3 rounded-t-lg">
+                        <div class="col-span-1">Learning Component</div>
+                        <div class="col-span-1">Experience</div>
+                        <div class="col-span-1 hidden sm:block">What You’ll Do</div>
+                    </div>
+                    
+                    <!-- Data Rows -->
+                    <div class="divide-y divide-gray-200 border border-gray-200 rounded-b-lg">
+                        <div class="grid grid-cols-3 p-3 bg-gray-50">
+                            <div class="col-span-1 font-semibold text-stem-blue">Weekly Micro-Lessons</div>
+                            <div class="col-span-1">Self-paced interactive content</div>
+                            <div class="col-span-1 hidden sm:block">Learn concepts, explore examples, complete reflections and quizzes.</div>
+                        </div>
+                        <div class="grid grid-cols-3 p-3">
+                            <div class="col-span-1 font-semibold text-stem-blue">Live Mentor Sessions</div>
+                            <div class="col-span-1">9 online classes (60–75 min)</div>
+                            <div class="col-span-1 hidden sm:block">Watch demos, discuss pedagogy, and engage with mentors.</div>
+                        </div>
+                        <div class="grid grid-cols-3 p-3 bg-gray-50">
+                            <div class="col-span-1 font-semibold text-stem-blue">Guided Practice Projects</div>
+                            <div class="col-span-1">Hands-on no-code labs</div>
+                            <div class="col-span-1 hidden sm:block">Build mini-projects using Scratch, Teachable Machine, Canva, and more.</div>
+                        </div>
+                        <div class="grid grid-cols-3 p-3">
+                            <div class="col-span-1 font-semibold text-stem-blue">Capstone Project</div>
+                            <div class="col-span-1">Real-world specialization prototype</div>
+                            <div class="col-span-1 hidden sm:block">Design and present an AI project relevant to your domain.</div>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600">
+                        *Note: You will never be expected to figure things out alone — every lesson includes clear guidance, templates, and mentor feedback.
+                    </p>
+                </div>
+            </section>
+
+            <!-- What You’ll Gain -->
+            <section class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-blue">
+                <h2 class="text-2xl font-bold text-stem-blue mb-4 flex items-center">
+                    <!-- SVG: Sparkles -->
+                    <svg class="w-6 h-6 mr-3 text-stem-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75L18.75 12L12 5.25L5.25 12L12 18.75zm0-9.75L9 9.75M15 9.75L12 12.75"></path><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 17.25l-1.5 1.5M7.5 17.25l1.5 1.5"></path></svg>
+                    What You’ll Gain
+                </h2>
+                <ul class="list-none space-y-3 text-gray-700">
+                    <li class="flex items-start"><span class="text-stem-green mr-2 mt-1">✓</span> Confidently teach and lead AI education across multiple disciplines.</li>
+                    <li class="flex items-start"><span class="text-stem-green mr-2 mt-1">✓</span> Apply human-centered and ethical AI frameworks to classroom projects.</li>
+                    <li class="flex items-start"><span class="text-stem-green mr-2 mt-1">✓</span> Design creative, project-based AI experiences using no-code tools.</li>
+                    <li class="flex items-start"><span class="text-stem-green mr-2 mt-1">✓</span> Earn the <span class="text-stem-purple font-semibold">Certified STEM AI Architect™ Credential</span> + 3 digital badges.</li>
+                    <li class="flex items-start"><span class="text-stem-green mr-2 mt-1">✓</span> Join a global network of mentors advancing AI education for school students worldwide.</li>
+                </ul>
+            </section>
+
+            <!-- Program Philosophy -->
+            <section class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-purple">
+                <h2 class="text-2xl font-bold text-stem-purple mb-6 flex items-center">
+                    <!-- SVG: Blocks (for interconnectedness/philosophy) -->
+                    <svg class="w-6 h-6 mr-3 text-stem-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 16.5L12 12m0 0L7.5 7.5M12 12v6m0-6h6m-6 0H6m6 0a6 6 0 100-12 6 6 0 000 12z"></path></svg>
+                    Program Philosophy
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Pillar 1 -->
+                    <div class="philosophy-card p-5 bg-stem-purple/10 rounded-xl border-l-4 border-stem-purple shadow-sm hover:shadow-md">
+                        <p class="font-extrabold text-stem-purple text-xl mb-1">Empathy & Humanity</p>
+                        <p class="text-sm text-gray-700">Teaching AI through ethics and human values. (Case studies, reflections, and the AI Ethics Pledge.)</p>
+                    </div>
+                    <!-- Pillar 2 -->
+                    <div class="philosophy-card p-5 bg-stem-purple/10 rounded-xl border-l-4 border-stem-purple shadow-sm hover:shadow-md">
+                        <p class="font-extrabold text-stem-purple text-xl mb-1">Creativity & Design</p>
+                        <p class="text-sm text-gray-700">Learning through projects and storytelling. (Canva designs, Scratch simulations, Teachable Machine demos.)</p>
+                    </div>
+                    <!-- Pillar 3 -->
+                    <div class="philosophy-card p-5 bg-stem-purple/10 rounded-xl border-l-4 border-stem-purple shadow-sm hover:shadow-md">
+                        <p class="font-extrabold text-stem-purple text-xl mb-1">Interdisciplinary Innovation</p>
+                        <p class="text-sm text-gray-700">Connecting CS with real-world domains. (Capstone projects reviewed by SMEs.)</p>
+                    </div>
+                    <!-- Pillar 4 -->
+                    <div class="philosophy-card p-5 bg-stem-purple/10 rounded-xl border-l-4 border-stem-purple shadow-sm hover:shadow-md">
+                        <p class="font-extrabold text-stem-purple text-xl mb-1">Mentorship & Community</p>
+                        <p class="text-sm text-gray-700">Growing together across borders. (TrainerCentral discussions, peer feedback, alumni hub.)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reflection Activity -->
+            <section class="bg-stem-orange/10 p-6 rounded-xl shadow-lg border-2 border-dashed border-stem-orange/50">
+                <h2 class="text-2xl font-bold text-stem-orange mb-3 flex items-center">
+                    <!-- SVG: Message Square -->
+                    <svg class="w-6 h-6 mr-3 text-stem-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M16 10h.01M10 16h4M3 21h18v-2a2 2 0 00-2-2H5a2 2 0 00-2 2v2z"></path></svg>
+                    Reflection Activity — “Your Why”
+                </h2>
+                <div class="p-4 bg-white rounded-lg border border-gray-300">
+                    <p class="font-bold mb-2">Prompt:</p>
+                    <ul class="list-disc ml-5 text-gray-700 space-y-1">
+                        <li>Why do you want to become a Certified STEM AI Architect™?</li>
+                        <li>What kind of impact do you hope to create in your school, organization, or community?</li>
+                    </ul>
+                </div>
+                <p class="mt-4 text-sm text-gray-600 italic">
+                    Post your reflection (80–120 words) in the **Lesson 0.2 Discussion Board**. Mentors will respond personally!
+                </p>
+            </section>
+            
+            <!-- Badge Framework -->
+            <section class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-blue">
+                <h2 class="text-2xl font-bold text-stem-blue mb-4 flex items-center">
+                    <!-- SVG: Award/Medal -->
+                    <svg class="w-6 h-6 mr-3 text-stem-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 009-9 9 9 0 00-9-9 9 9 0 00-9 9 9 9 0 009 9z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 12l-3-3-3 3M12 15l-3-3 3-3"></path></svg>
+                    Badge Framework
+                </h2>
+                <!-- Responsive Badge Grid -->
+                <div class="grid md:grid-cols-3 gap-4 text-center">
+                    <!-- Badge 1 -->
+                    <div class="p-4 border-2 border-stem-blue rounded-lg bg-stem-blue/5">
+                        <p class="font-bold text-stem-blue mb-1">AI Educator Foundations</p>
+                        <p class="text-xs text-gray-600">Focus: Pedagogy, ethics, and no-code tools</p>
+                        <p class="text-sm font-semibold text-stem-green mt-2">Earned: Modules 0–2</p>
+                    </div>
+                    <!-- Badge 2 -->
+                    <div class="p-4 border-2 border-stem-blue rounded-lg bg-stem-blue/5">
+                        <p class="font-bold text-stem-blue mb-1">AI Project Mentor</p>
+                        <p class="text-xs text-gray-600">Focus: Designing and guiding interdisciplinary projects</p>
+                        <p class="text-sm font-semibold text-stem-green mt-2">Earned: Modules 3–5</p>
+                    </div>
+                    <!-- Badge 3 -->
+                    <div class="p-4 border-2 border-stem-blue rounded-lg bg-stem-blue/5">
+                        <p class="font-bold text-stem-blue mb-1">Certified STEM AI Architect™</p>
+                        <p class="text-xs text-gray-600">Focus: Leading cross-domain AI education</p>
+                        <p class="text-sm font-semibold text-stem-green mt-2">Earned: Capstone + SME Review</p>
+                    </div>
+                </div>
+                <p class="mt-4 text-sm text-gray-600 italic">
+                    All badges follow Open Badge 2.0 standards and can be verified or shared on LinkedIn.
+                </p>
+            </section>
+
+            <!-- Lesson Completion Checklist -->
+            <section class="mt-12 p-6 bg-stem-green/10 rounded-2xl border-2 border-dashed border-stem-green shadow-lg">
+                <h2 class="text-2xl font-bold text-stem-green mb-4 flex items-center">
+                    <!-- SVG: Clipboard Check -->
+                    <svg class="w-6 h-6 mr-3 text-stem-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 18l6-6-6-6"></path><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V4.5a2.5 2.5 0 00-5 0V10m0 0H4a2 2 0 00-2 2v8a2 2 0 002 2h16a2 2 0 002-2v-8a2 2 0 00-2-2h-4"></path></svg>
+                    Lesson Completion Checklist
+                </h2>
+
+                <div id="checklist" class="space-y-4 text-gray-800">
+                    <!-- Check 1 -->
+                    <label for="check1" class="flex items-center cursor-pointer select-none">
+                        <input type="checkbox" id="check1" class="hidden custom-check" onchange="updateCompletion()">
+                        <div class="w-6 h-6 border-2 border-gray-400 rounded transition duration-200 ease-in-out mr-3 flex items-center justify-center bg-white">
+                            <svg class="w-4 h-4 text-white opacity-0 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <span class="text-base font-medium">Review all sections of “Why This Program.”</span>
+                    </label>
+
+                    <!-- Check 2 -->
+                    <label for="check2" class="flex items-center cursor-pointer select-none">
+                        <input type="checkbox" id="check2" class="hidden custom-check" onchange="updateCompletion()">
+                        <div class="w-6 h-6 border-2 border-gray-400 rounded transition duration-200 ease-in-out mr-3 flex items-center justify-center bg-white">
+                            <svg class="w-4 h-4 text-white opacity-0 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <span class="text-base font-medium">Post your "Your Why" reflection in the Discussion Board.</span>
+                    </label>
+
+                    <!-- Check 3 -->
+                    <label for="check3" class="flex items-center cursor-pointer select-none">
+                        <input type="checkbox" id="check3" class="hidden custom-check" onchange="updateCompletion()">
+                        <div class="w-6 h-6 border-2 border-gray-400 rounded transition duration-200 ease-in-out mr-3 flex items-center justify-center bg-white">
+                            <svg class="w-4 h-4 text-white opacity-0 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                        </div>
+                        <span class="text-base font-medium">Review the Badge Framework.</span>
+                    </label>
+                </div>
+                
+                <p id="completion-message" class="mt-6 text-lg font-semibold text-stem-orange">
+                    Complete the checklist items above to unlock Lesson 0.3.
+                </p>
+
+                <button id="next-lesson-button"
+                    class="mt-4 px-8 py-3 bg-stem-blue text-text-alt font-bold rounded-full shadow-lg transition duration-300 ease-in-out opacity-50 cursor-not-allowed disabled:opacity-50"
+                    disabled
+                >
+                    Mark as Complete and Go to Lesson 0.3
+                </button>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function updateCompletion() {
+            const check1 = document.getElementById('check1').checked;
+            const check2 = document.getElementById('check2').checked;
+            const check3 = document.getElementById('check3').checked;
+            const button = document.getElementById('next-lesson-button');
+            const message = document.getElementById('completion-message');
+
+            const allComplete = check1 && check2 && check3;
+
+            if (allComplete) {
+                button.disabled = false;
+                button.classList.remove('cursor-not-allowed', 'opacity-50');
+                button.classList.add('hover:bg-stem-blue/90', 'hover:scale-[1.01]');
+                message.textContent = 'Ready to move on! Click the button to unlock Lesson 0.3 — Tech Comfort Diagnostic.';
+                message.classList.remove('text-stem-orange');
+                message.classList.add('text-stem-green');
+
+                button.onclick = () => {
+                    // Simulate completion action (In a real app, this would route the user)
+                    message.textContent = 'Lesson 0.2 completed! Proceeding to the next lesson...';
+                    button.textContent = 'Unlocked!';
+                    button.disabled = true;
+                    button.classList.add('bg-stem-green');
+                    button.classList.remove('bg-stem-blue');
+                };
+
+            } else {
+                button.disabled = true;
+                button.classList.add('cursor-not-allowed', 'opacity-50');
+                button.classList.remove('hover:bg-stem-blue/90', 'hover:scale-[1.01]');
+                message.textContent = `Complete ${3 - (check1 + check2 + check3)} more step(s) to unlock Lesson 0.3.`;
+                message.classList.add('text-stem-orange');
+                message.classList.remove('text-stem-green');
+                button.onclick = null;
+                button.textContent = 'Mark as Complete and Go to Lesson 0.3';
+            }
+        }
+    </script>
+</body>
+</html>
