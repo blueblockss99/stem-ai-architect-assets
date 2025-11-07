@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code of Conduct & AI Ethics Pledge</title>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* Apply the Inter font globally */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F0F0; /* Light Gray Background */
+        }
+        /* Custom scrollbar for better aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #007BFF; /* Electric Blue */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e0e0e0;
+        }
+    </style>
+
+    <script>
+        // Tailwind Configuration using the exact STEM AI Studio color palette
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'stem-blue': '#007BFF',      // Primary: Electric Blue
+                        'stem-orange': '#FF5733',    // Secondary: Sunset Orange
+                        'stem-green': '#32CD32',     // Accent: Lime Green
+                        'stem-purple': '#9B30FF',    // Creative Pop: Vivid Purple
+                        'stem-bg': '#F0F0F0',        // Background: Light Gray
+                        'text-primary': '#000000',   // Text: Black
+                        'text-alt': '#FFFFFF',       // Text: White
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen antialiased text-text-primary">
+
+    <div id="app" class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-10">
+
+        <!-- Main Header Banner (Electric Blue to Sunset Orange Gradient) -->
+        <header class="bg-gradient-to-r from-stem-blue to-stem-orange text-text-alt p-6 sm:p-10 rounded-3xl shadow-2xl mb-10">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+                STEM AI Studio Principles
+            </h1>
+            <p class="mt-2 text-lg sm:text-xl opacity-90">
+                Upholding the standards of professionalism and ethical AI practice.
+            </p>
+        </header>
+
+        <!-- Main Content Grid -->
+        <div class="grid lg:grid-cols-2 gap-8">
+
+            <!-- 1. Code of Conduct Section -->
+            <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl">
+                <h2 class="text-2xl sm:text-3xl font-bold text-stem-blue mb-6 border-b-2 border-stem-blue/50 pb-2">
+                    STEM AI Studio Code of Conduct
+                </h2>
+
+                <p class="mb-6 italic text-gray-600">
+                    As a participant in the Certified STEM AI Architect™ Program, I agree to uphold the following standards of professionalism, respect, and integrity throughout my learning journey.
+                </p>
+
+                <!-- Conduct Categories -->
+                <div id="code-of-conduct-content" class="space-y-6">
+                    <!-- Category 1 -->
+                    <div class="border-l-4 border-stem-orange pl-4">
+                        <h3 class="font-bold text-lg text-stem-orange mb-2">1. Professionalism & Respect</h3>
+                        <ul class="space-y-2 text-gray-700 list-none p-0">
+                            <!-- Custom Checklist Items -->
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Treat all learners, mentors, and guest speakers with courtesy, empathy, and cultural sensitivity.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Communicate constructively in all discussions, whether written, verbal, or online.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Respect diverse perspectives — disagreement is welcome, disrespect is not.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 2 -->
+                    <div class="border-l-4 border-stem-orange pl-4">
+                        <h3 class="font-bold text-lg text-stem-orange mb-2">2. Academic Integrity</h3>
+                        <ul class="space-y-2 text-gray-700 list-none p-0">
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Submit only my own original work.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Credit all collaborators, sources, and AI-generated content used in projects.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Avoid plagiarism, data falsification, or reusing another learner’s project without acknowledgment.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 3 -->
+                    <div class="border-l-4 border-stem-orange pl-4">
+                        <h3 class="font-bold text-lg text-stem-orange mb-2">3. Privacy & Digital Safety</h3>
+                        <ul class="space-y-2 text-gray-700 list-none p-0">
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Use only public or school-safe data and images.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Do not share screenshots, recordings, or personal information from sessions without consent.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Follow applicable data-protection policies (e.g., FERPA, GDPR).</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 4 -->
+                    <div class="border-l-4 border-stem-orange pl-4">
+                        <h3 class="font-bold text-lg text-stem-orange mb-2">4. Ethical Technology Use</h3>
+                        <ul class="space-y-2 text-gray-700 list-none p-0">
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Use AI tools responsibly and only for approved educational purposes.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Avoid using AI systems to generate harmful, biased, or inappropriate content.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Be transparent about AI’s role in any output I present.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 5 -->
+                    <div class="border-l-4 border-stem-orange pl-4">
+                        <h3 class="font-bold text-lg text-stem-orange mb-2">5. Collaboration & Community</h3>
+                        <ul class="space-y-2 text-gray-700 list-none p-0">
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Offer constructive feedback and celebrate peer achievements.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Maintain a supportive, inclusive environment across all specialization paths.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>Represent STEM AI Studio with professionalism when sharing public project work.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Acknowledgment Box 1 -->
+                    <div class="bg-stem-blue/10 p-4 rounded-xl border border-stem-blue/50 mt-6">
+                        <p class="font-semibold text-stem-blue mb-3 flex items-center">
+                            <span class="text-xl mr-2">✅</span> Acknowledgment
+                        </p>
+                        <label for="conduct-ack" class="flex items-center cursor-pointer select-none">
+                            <input type="checkbox" id="conduct-ack" class="hidden" onchange="checkCompletion()">
+                            <div class="w-6 h-6 border-2 border-stem-blue rounded transition duration-200 ease-in-out mr-3 flex items-center justify-center bg-white">
+                                <!-- Custom Checkmark SVG -->
+                                <svg id="conduct-check" class="w-4 h-4 text-stem-green opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <span class="text-sm sm:text-base text-gray-800">
+                                By marking this lesson as complete, I acknowledge that I have read, understood, and agreed to the **STEM AI Studio Code of Conduct**.
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. AI Ethics Pledge Section -->
+            <section class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl">
+                <h2 class="text-2xl sm:text-3xl font-bold text-stem-purple mb-6 border-b-2 border-stem-purple/50 pb-2">
+                    STEM AI Studio — AI Ethics Pledge
+                </h2>
+
+                <p class="mb-6 italic text-gray-600">
+                    As a Certified STEM AI Architect™ candidate, I recognize that artificial intelligence carries both extraordinary potential and profound responsibility. I therefore pledge to approach all learning, teaching, and project creation with integrity, transparency, and human empathy.
+                </p>
+
+                <!-- Pledge Categories -->
+                <div id="ethics-pledge-content" class="space-y-6">
+                    <!-- Category 1 -->
+                    <div class="border-l-4 border-stem-blue pl-4">
+                        <h3 class="font-bold text-lg text-stem-blue mb-2">1. Purpose & Responsibility</h3>
+                        <ul class="space-y-2 text-gray-700 list-none p-0">
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>I will use AI as a tool to enhance human creativity, learning, and well-being, not to replace or diminish it.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>I will prioritize ethical, inclusive, and learner-safe applications of AI in education.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 2 -->
+                    <div class="border-l-4 border-stem-blue pl-4">
+                        <h3 class="font-bold text-lg text-stem-blue mb-2">2. Fairness & Bias Awareness</h3>
+                        <ul class="space-y-2 text-gray-700 list-none p-0">
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>I will actively identify and reduce bias in data, prompts, and outputs.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>I will design lessons that help students understand how AI systems can reflect or amplify bias — and how to question it critically.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 3 -->
+                    <div class="border-l-4 border-stem-blue pl-4">
+                        <h3 class="font-bold text-lg text-stem-blue mb-2">3. Transparency & Attribution</h3>
+                        <ul class="space-y-2 text-gray-700 list-none p-0">
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>I will disclose when and how AI tools are used in my work.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>I will credit original human and AI sources appropriately.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 4 -->
+                    <div class="border-l-4 border-stem-blue pl-4">
+                        <h3 class="font-bold text-lg text-stem-blue mb-2">4. Privacy & Safety</h3>
+                        <ul class="space-y-2 text-gray-700 list-none p-0">
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>I will protect student data, images, and voices from unauthorized use.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>I will comply with school or organizational data-protection policies and ensure my projects respect privacy and consent.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 5 -->
+                    <div class="border-l-4 border-stem-blue pl-4">
+                        <h3 class="font-bold text-lg text-stem-blue mb-2">5. Human-Centered Design</h3>
+                        <ul class="space-y-2 text-gray-700 list-none p-0">
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>I will keep human judgment, empathy, and ethics at the core of all AI-driven projects.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-stem-green mr-2 mt-1">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                </span>
+                                <span>I will teach others to view AI as a partner for creative problem-solving, not a substitute for human values or decision-making.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Acknowledgment Box 2 -->
+                    <div class="bg-stem-purple/10 p-4 rounded-xl border border-stem-purple/50 mt-6">
+                        <p class="font-semibold text-stem-purple mb-3 flex items-center">
+                            <span class="text-xl mr-2">✅</span> Acknowledgment
+                        </p>
+                        <label for="pledge-ack" class="flex items-center cursor-pointer select-none">
+                            <input type="checkbox" id="pledge-ack" class="hidden" onchange="checkCompletion()">
+                            <div class="w-6 h-6 border-2 border-stem-purple rounded transition duration-200 ease-in-out mr-3 flex items-center justify-center bg-white">
+                                <!-- Custom Checkmark SVG -->
+                                <svg id="pledge-check" class="w-4 h-4 text-stem-green opacity-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <span class="text-sm sm:text-base text-gray-800">
+                                By marking this lesson as complete, I confirm that I have read, understood, and agreed to the **STEM AI Studio AI Ethics Pledge**.
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Global Completion Status / Button -->
+        <div class="mt-10 p-6 bg-stem-orange/10 rounded-2xl border-2 border-dashed border-stem-orange shadow-xl text-center">
+            <p id="status-message" class="text-lg font-semibold text-stem-orange">
+                Please acknowledge both the Code of Conduct and the AI Ethics Pledge to continue.
+            </p>
+            <button id="complete-button"
+                class="mt-4 px-8 py-3 bg-stem-blue text-text-alt font-bold rounded-full shadow-lg transition duration-300 ease-in-out opacity-50 cursor-not-allowed hover:shadow-xl disabled:opacity-50"
+                disabled
+            >
+                Confirm and Complete Lesson
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function checkCompletion() {
+            const conductChecked = document.getElementById('conduct-ack').checked;
+            const pledgeChecked = document.getElementById('pledge-ack').checked;
+            const completeButton = document.getElementById('complete-button');
+            const statusMessage = document.getElementById('status-message');
+            const conductCheckmark = document.getElementById('conduct-check');
+            const pledgeCheckmark = document.getElementById('pledge-check');
+            
+            // Toggle visibility for custom checkmark SVG
+            conductCheckmark.classList.toggle('opacity-100', conductChecked);
+            pledgeCheckmark.classList.toggle('opacity-100', pledgeChecked);
+
+            if (conductChecked && pledgeChecked) {
+                completeButton.disabled = false;
+                completeButton.classList.remove('cursor-not-allowed', 'opacity-50');
+                completeButton.classList.add('hover:bg-stem-blue/90', 'hover:scale-[1.01]');
+                statusMessage.textContent = 'Awesome! Both documents have been acknowledged. Click Confirm to proceed.';
+                statusMessage.classList.remove('text-stem-orange');
+                statusMessage.classList.add('text-stem-green');
+
+                completeButton.onclick = () => {
+                    // In a real application, this would trigger an API call or navigation.
+                    // Here, we'll show a confirmation message.
+                    statusMessage.textContent = '✅ Lesson Completed! Data successfully logged.';
+                    completeButton.textContent = 'Completed!';
+                    completeButton.disabled = true;
+                    completeButton.classList.add('bg-stem-green');
+                    completeButton.classList.remove('bg-stem-blue');
+                };
+
+            } else {
+                completeButton.disabled = true;
+                completeButton.classList.add('cursor-not-allowed', 'opacity-50');
+                completeButton.classList.remove('hover:bg-stem-blue/90', 'hover:scale-[1.01]');
+                statusMessage.textContent = 'Please acknowledge both the Code of Conduct and the AI Ethics Pledge to continue.';
+                statusMessage.classList.add('text-stem-orange');
+                statusMessage.classList.remove('text-stem-green');
+                completeButton.onclick = null;
+                completeButton.textContent = 'Confirm and Complete Lesson';
+            }
+        }
+    </script>
+</body>
+</html>
