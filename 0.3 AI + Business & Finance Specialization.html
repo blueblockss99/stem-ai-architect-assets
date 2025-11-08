@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI + Business & Finance Specialization</title>
+    <!-- Load Inter and Roboto Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Primary font */
+            background-color: #f7f9fc; /* Light professional background */
+        }
+        .text-roboto {
+            font-family: 'Roboto', sans-serif; /* Used for headings */
+        }
+        /* Custom Colors based on STEM AI Studio Palette */
+        .text-stem-purple { color: #9B30FF; }
+        .bg-stem-purple { background-color: #9B30FF; }
+        .text-stem-blue { color: #007BFF; }
+        .bg-stem-blue { background-color: #007BFF; }
+        /* Accent Color: Gold #FFD700 */
+        .text-stem-gold { color: #FFD700; }
+        .bg-stem-gold { background-color: #FFD700; }
+        .border-stem-gold { border-color: #FFD700; }
+        /* Secondary Accents for contrast */
+        .text-stem-pink { color: #FF69B4; }
+        .text-stem-teal { color: #00A3A3; }
+
+        .hover-lift:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Gradient for Header */
+        .header-gradient {
+            background: linear-gradient(135deg, #007BFF, #9B30FF);
+        }
+    </style>
+
+    <script>
+        // Tailwind Configuration for easy color access
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'stem-blue': '#007BFF',
+                        'stem-purple': '#9B30FF',
+                        'stem-gold': '#FFD700',
+                        'stem-pink': '#FF69B4',
+                        'stem-teal': '#00A3A3',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased text-gray-900">
+
+    <div id="app" class="max-w-6xl mx-auto p-4 sm:p-6 lg:p-10">
+
+        <!-- Header Block: AI + Business & Finance -->
+        <header class="header-gradient text-white p-8 sm:p-12 rounded-3xl shadow-2xl mb-12">
+            <h1 class="text-roboto text-3xl sm:text-5xl font-extrabold tracking-tight flex items-center">
+                <!-- SVG: Growth Chart (Symbol for Business/Finance Impact) -->
+                <svg class="w-8 h-8 sm:w-10 sm:h-10 mr-3 inline text-stem-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                AI + Business & Finance Specialization
+            </h1>
+            <p class="mt-3 text-xl sm:text-2xl font-light opacity-90">
+                Where Data, Decisions, and Innovation Converge
+            </p>
+        </header>
+
+        <!-- Section: Who This Path Is For -->
+        <section class="mb-12">
+            <h2 class="text-roboto text-3xl font-extrabold text-gray-800 mb-6 border-b-4 border-stem-gold pb-2 flex items-center">
+                 <!-- SVG: Compass -->
+                <svg class="w-8 h-8 mr-3 text-stem-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Who This Path Is For
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1: Educators -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-pink transition duration-300 hover-lift">
+                    <p class="font-black text-xl text-stem-pink mb-2">Educators & Scholars</p>
+                    <p class="text-base text-gray-700">Business, economics, and accounting educators.</p>
+                </div>
+                <!-- Card 2: Mentors -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-gold transition duration-300 hover-lift">
+                    <p class="font-black text-xl text-stem-gold mb-2">Entrepreneurship Mentors</p>
+                    <p class="text-base text-gray-700">Entrepreneurship and marketing mentors.</p>
+                </div>
+                <!-- Card 3: Professionals -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-teal transition duration-300 hover-lift">
+                    <p class="font-black text-xl text-stem-teal mb-2">STEM Professionals</p>
+                    <p class="text-base text-gray-700">Professionals seeking to bring AI-powered decision-making and data literacy into their classrooms.</p>
+                </div>
+            </div>
+            <p class="mt-6 text-lg italic text-gray-600 border-l-4 border-stem-gold pl-4 bg-yellow-50/50 p-3 rounded-lg">
+                Ideal participants are those who want to demystify AI in the business world — helping students understand how data, prediction, and automation are transforming industries. This path blends analytical reasoning with human judgment, empowering educators to teach finance, marketing, and management through a modern AI lens.
+            </p>
+        </section>
+
+        <!-- Section: What You'll Learn (Skills & Outcomes) -->
+        <section class="mb-12">
+            <h2 class="text-roboto text-3xl font-extrabold text-gray-800 mb-6 border-b-4 border-stem-pink pb-2 flex items-center">
+                 <!-- SVG: Target -->
+                <svg class="w-8 h-8 mr-3 text-stem-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10l3-3m0 0l3 3m-3-3v11.5a.5.5 0 00.5.5h15a.5.5 0 00.5-.5V10m-3-3V6a2 2 0 00-2-2H8a2 2 0 00-2 2v1"></path></svg>
+                What You’ll Learn
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- SKILLS -->
+                <div>
+                    <h3 class="text-xl font-bold text-stem-pink mb-3">Core Skill Focus</h3>
+                    <ul class="space-y-3">
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-pink">
+                            <span class="flex-shrink-0 text-stem-pink mr-3 mt-1">→</span>
+                            <p class="text-base text-gray-700">Use AI tools to analyze business data and uncover actionable insights.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-pink">
+                            <span class="flex-shrink-0 text-stem-pink mr-3 mt-1">→</span>
+                            <p class="text-base text-gray-700">Model market trends, customer behavior, and financial patterns using no-code tools.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-pink">
+                            <span class="flex-shrink-0 text-stem-pink mr-3 mt-1">→</span>
+                            <p class="text-base text-gray-700">Explore the ethics of automation, fairness, and transparency in business decisions.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-pink">
+                            <span class="flex-shrink-0 text-stem-pink mr-3 mt-1">→</span>
+                            <p class="text-base text-gray-700">Teach students to think like data-informed entrepreneurs — balancing logic and empathy.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-pink">
+                            <span class="flex-shrink-0 text-stem-pink mr-3 mt-1">→</span>
+                            <p class="text-base text-gray-700">Integrate AI simulations and dashboards into classroom problem-solving.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- OUTCOMES -->
+                <div>
+                    <h3 class="text-xl font-bold text-stem-teal mb-3">Key Learning Outcomes</h3>
+                    <ul class="space-y-3">
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-teal">
+                            <span class="flex-shrink-0 text-stem-teal mr-3 mt-1">✓</span>
+                            <p class="text-base text-gray-700">Explain how predictive analytics informs pricing, demand, and investment strategies.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-teal">
+                            <span class="flex-shrink-0 text-stem-teal mr-3 mt-1">✓</span>
+                            <p class="text-base text-gray-700">Apply storytelling to data — turning insights into persuasive presentations.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-teal">
+                            <span class="flex-shrink-0 text-stem-teal mr-3 mt-1">✓</span>
+                            <p class="text-base text-gray-700">Build AI literacy for tomorrow’s innovators and ethical leaders.</p>
+                        </li>
+                    </ul>
+                    <p class="mt-6 text-base italic text-gray-500 bg-gray-50 p-3 rounded-lg">
+                        This specialization is your guide to integrating AI into core business education.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Capstones & Mini-Labs -->
+        <section class="mb-12">
+            <h2 class="text-roboto text-3xl font-extrabold text-gray-800 mb-6 border-b-4 border-stem-gold pb-2 flex items-center">
+                <!-- SVG: Puzzle -->
+                <svg class="w-8 h-8 mr-3 text-stem-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 100 4 2 2 0 000-4zM19 12a2 2 0 100-4 2 2 0 000 4zM12 20a2 2 0 100-4 2 2 0 000 4zM5 12a2 2 0 100-4 2 2 0 000 4z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v2.5M19 8h-2.5M12 20v-2.5M5 8h2.5M17 12h-2.5M7 12H9.5M14 8.5L12 10l-2-1.5M12 14v2.5"></path></svg>
+                Capstone & Mini-Lab Projects
+            </h2>
+
+            <!-- Capstones Table-like Structure -->
+            <div class="p-6 rounded-xl shadow-2xl bg-white border-t-8 border-stem-gold mb-8">
+                <h3 class="text-2xl font-bold text-stem-gold mb-4 flex items-center text-roboto">
+                    <!-- SVG: Analytics Bar Chart -->
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 3.055A9.929 9.929 0 0112 21.5a9.929 9.929 0 011-18.445M12 2.5v19M21.5 12h-19"></path></svg>
+                    Sample Capstones
+                </h3>
+                <div class="space-y-4">
+                    <!-- Capstone 1: Sales Forecaster -->
+                    <div class="bg-yellow-50 p-4 rounded-lg border border-stem-gold/50 hover-lift transition duration-300">
+                        <p class="font-semibold text-gray-800 text-lg flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-stem-gold inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.633a9.925 9.925 0 01-1.395-4.367c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            Smart Sales Forecaster
+                        </p>
+                        <p class="text-base text-gray-700 mt-1">Students design an AI model to predict product demand and visualize results in Power BI. <span class="text-stem-gold">(AI Focus: Predictive analytics)</span></p>
+                    </div>
+                    <!-- Capstone 2: Sentiment Analyzer -->
+                    <div class="bg-yellow-50 p-4 rounded-lg border border-stem-gold/50 hover-lift transition duration-300">
+                        <p class="font-semibold text-gray-800 text-lg flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-stem-gold inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 14v1.5M10.5 9.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM16.5 9.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM7.5 21l-.5-2.5m10 2.5l.5-2.5M12 21V19"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 009-9V5a2 2 0 00-2-2h-2a2 2 0 00-2 2v2M12 21a9 9 0 01-9-9V5a2 2 0 012-2h2a2 2 0 012 2v2"></path></svg>
+                            Brand Sentiment Analyzer
+                        </p>
+                        <p class="text-base text-gray-700 mt-1">A chatbot or dashboard that classifies customer feedback as positive, neutral, or negative. <span class="text-stem-gold">(AI Focus: Natural language processing)</span></p>
+                    </div>
+                    <!-- Capstone 3: Startup Success Simulator -->
+                    <div class="bg-yellow-50 p-4 rounded-lg border border-stem-gold/50 hover-lift transition duration-300">
+                        <p class="font-semibold text-gray-800 text-lg flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-stem-gold inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 10l-2 2m0 0l-2 2m2-2V3M10 21h4a2 2 0 002-2v-4a2 2 0 00-2-2h-4a2 2 0 00-2 2v4a2 2 0 002 2z"></path></svg>
+                            Startup Success Simulator
+                        </p>
+                        <p class="text-base text-gray-700 mt-1">Students simulate business growth scenarios using AI-generated insights. <span class="text-stem-gold">(AI Focus: Scenario modeling)</span></p>
+                    </div>
+                    <!-- Capstone 4: Sustainable Finance Explorer -->
+                    <div class="bg-yellow-50 p-4 rounded-lg border border-stem-gold/50 hover-lift transition duration-300">
+                        <p class="font-semibold text-gray-800 text-lg flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-stem-gold inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 10.5h1.5M2.25 14.5h1.5M21.75 10.5h-1.5M21.75 14.5h-1.5M4.5 9.5V7.5a2 2 0 012-2h11a2 2 0 012 2v2"></path><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.5v2a2 2 0 002 2h11a2 2 0 002-2v-2"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5v9"></path></svg>
+                            Sustainable Finance Explorer
+                        </p>
+                        <p class="text-base text-gray-700 mt-1">Analyzes sustainability reports to identify ethical investment trends. <span class="text-stem-gold">(AI Focus: Data mining & ethical AI)</span></p>
+                    </div>
+                </div>
+                <p class="mt-6 text-base italic text-gray-500 text-center">
+                    Each capstone emphasizes both quantitative skills and ethical reflection, preparing educators to guide real-world student projects.
+                </p>
+            </div>
+
+            <!-- Mini-Labs Table-like Structure -->
+            <div class="p-6 rounded-xl shadow-2xl bg-white border-t-8 border-stem-pink">
+                <h3 class="text-2xl font-bold text-stem-pink mb-4 flex items-center text-roboto">
+                    <!-- SVG: Lightbulb -->
+                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 11l3-3m0 0l3 3m-3-3v8m0 0a2 2 0 11-4 0h4a2 2 0 11-4 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 009-9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v5a9 9 0 009 9z"></path></svg>
+                    Starter Mini-Labs
+                </h3>
+                <div class="space-y-4">
+                     <!-- Mini-Lab Item 1: Trend Tracker -->
+                    <div class="bg-pink-50 p-4 rounded-lg border border-stem-pink/50 hover-lift transition duration-300">
+                        <p class="font-semibold text-gray-800 text-lg flex items-center">
+                            <!-- SVG: Line Graph -->
+                            <svg class="w-5 h-5 mr-2 text-stem-pink inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            Trend Tracker
+                        </p>
+                        <p class="text-base text-gray-700 mt-1">Tool: Datawrapper + Copilot. Focus: Visualize sample sales or market data and discuss what AI can “see.”</p>
+                    </div>
+                    <!-- Mini-Lab Item 2: Customer Voice Classifier -->
+                    <div class="bg-pink-50 p-4 rounded-lg border border-stem-pink/50 hover-lift transition duration-300">
+                        <p class="font-semibold text-gray-800 text-lg flex items-center">
+                            <!-- SVG: Microphone -->
+                            <svg class="w-5 h-5 mr-2 text-stem-pink inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11v3a7 7 0 01-14 0v-3m14 0a7 7 0 00-14 0m14 0h-14m7 0V5a4 4 0 014-4 4 4 0 014 4v6"></path></svg>
+                            Customer Voice Classifier
+                        </p>
+                        <p class="text-base text-gray-700 mt-1">Tool: Teachable Machine. Focus: Train a small model to detect satisfaction from text samples.</p>
+                    </div>
+                    <!-- Mini-Lab Item 3: AI Pitch Coach -->
+                    <div class="bg-pink-50 p-4 rounded-lg border border-stem-pink/50 hover-lift transition duration-300">
+                        <p class="font-semibold text-gray-800 text-lg flex items-center">
+                            <!-- SVG: Idea -->
+                            <svg class="w-5 h-5 mr-2 text-stem-pink inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M3.707 5.364l.707.707m1.272 1.272l-.707.707M12 21h1m6.364-1.636l-.707-.707M4.636 19.364l-.707-.707m12.728-9.524l-.707-.707M6.364 9.636l-.707-.707M20 12h1m-1-5.636l.707.707M4 12H3m7-9l2-2 2 2M12 21v1"></path></svg>
+                            AI Pitch Coach
+                        </p>
+                        <p class="text-base text-gray-700 mt-1">Tool: ChatGPT + Canva. Focus: Generate startup ideas and AI-driven business model posters.</p>
+                    </div>
+                    <!-- Mini-Lab Item 4: Impact Scoring -->
+                    <div class="bg-pink-50 p-4 rounded-lg border border-stem-pink/50 hover-lift transition duration-300">
+                        <p class="font-semibold text-gray-800 text-lg flex items-center">
+                            <!-- SVG: Plant/Growth -->
+                            <svg class="w-5 h-5 mr-2 text-stem-pink inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2v20M2 12h20M7 7l10 10M7 17l10-10"></path></svg>
+                            Impact Scoring
+                        </p>
+                        <p class="text-base text-gray-700 mt-1">Tool: Power BI (Copilot). Focus: Simulate how sustainability choices affect profitability metrics.</p>
+                    </div>
+                </div>
+                <p class="mt-6 text-base italic text-gray-500 text-center">
+                    Each lab builds understanding of AI as a decision-support tool, not a replacement for human creativity.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section: Tool Stack & Data/Ethics -->
+        <section class="mb-12">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Tool Stack -->
+                <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-lg border-t-8 border-stem-blue">
+                    <h3 class="text-roboto text-2xl font-bold text-stem-blue mb-4 flex items-center">
+                         <!-- SVG: Tool Stack (Wrench/Gear) -->
+                        <svg class="w-6 h-6 mr-3 text-stem-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        Core Tool Stack
+                    </h3>
+                    <div class="grid grid-cols-2 gap-y-3 gap-x-6 text-base">
+                        <div>
+                            <p class="text-lg font-semibold text-stem-purple">No-Code AI:</p>
+                            <p>ChatGPT, Teachable Machine</p>
+                            <p class="text-sm text-gray-500">(Lobe, AutoML)</p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-semibold text-stem-purple">Data Analysis:</p>
+                            <p>Power BI (Copilot), Datawrapper</p>
+                            <p class="text-sm text-gray-500">(Google Sheets AI, Tableau Public)</p>
+                        </div>
+                        <div class="col-span-2">
+                            <p class="text-lg font-semibold text-stem-purple">Visualization & Presentation:</p>
+                            <p>Canva, Runway ML, Google Workspace</p>
+                            <p class="text-sm text-gray-500">(Figma, Notion Charts, Miro, Teams)</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 text-base italic text-gray-500">The tools balance accessibility with real business utility — enabling data-driven storytelling without coding barriers.</p>
+                </div>
+
+                <!-- Data & Ethics -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-8 border-stem-teal">
+                    <h3 class="text-roboto text-2xl font-bold text-stem-teal mb-4 flex items-center">
+                        <!-- SVG: Shield (for Data & Ethics) -->
+                        <svg class="w-6 h-6 mr-3 text-stem-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.602 4.4l-3.3-3.3m0 0l-3.3-3.3m3.3 3.3L8 16"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 009-9v-3.879a4 4 0 00-1.171-2.828L12 3l-7.828 7.3A4 4 0 003 12.121V12a9 9 0 009 9z"></path></svg>
+                        Data & Ethics
+                    </h3>
+                    <ul class="list-disc ml-4 space-y-2 text-base text-gray-700">
+                        <li>Use synthetic or public business datasets (e.g., sample retail, financial, or climate data).</li>
+                        <li>Discuss privacy, bias, and fairness in automated decision systems.</li>
+                        <li>Highlight responsible AI in marketing and finance — avoiding manipulation or misinformation.</li>
+                        <li>Reinforce human oversight in financial predictions and automated decisions.</li>
+                        <li>Ethical reflection journals are encouraged throughout the specialization.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Mentorship & Outcome -->
+        <section class="mb-12">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mentorship Note -->
+                <div class="bg-stem-purple/10 p-6 rounded-xl shadow-lg border-l-8 border-stem-purple">
+                    <h3 class="text-roboto text-2xl font-bold text-stem-purple mb-3 flex items-center">
+                        <!-- SVG: Magnifying Glass (SME/Validation) -->
+                        <svg class="w-6 h-6 mr-3 text-stem-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 15l4.89 4.89M17 10a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        SME Checkpoints & Mentorship
+                    </h3>
+                    <ul class="list-disc ml-4 space-y-1 text-base text-gray-700">
+                        <li class="font-semibold">Model Validation:</li>
+                        <p class="text-sm text-gray-600 pl-4">Ensures logical accuracy in AI-driven analysis and market realism.</p>
+                        <li class="font-semibold">Ethical Oversight:</li>
+                        <p class="text-sm text-gray-600 pl-4">Reviews AI applications for fairness, inclusion, and transparency.</p>
+                    </ul>
+                    <p class="text-base mt-3 italic text-gray-500">Mentors emphasize critical thinking, financial storytelling, and data empathy — teaching how to balance precision with people.</p>
+                </div>
+
+                <!-- Outcome & Portfolio -->
+                <div class="bg-stem-gold/10 p-6 rounded-xl shadow-lg border-l-8 border-stem-gold">
+                    <h3 class="text-roboto text-2xl font-bold text-stem-gold mb-3 flex items-center">
+                        <!-- SVG: Credential/Badge (for Outcome) -->
+                        <svg class="w-6 h-6 mr-3 text-stem-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.602 4.4l-3.3-3.3m0 0l-3.3-3.3m3.3 3.3L8 16"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 009-9v-3.879a4 4 0 00-1.171-2.828L12 3l-7.828 7.3A4 4 0 003 12.121V12a9 9 0 009 9z"></path></svg>
+                        Outcome & Portfolio
+                    </h3>
+                    <p class="text-base text-gray-700">
+                        Participants design an AI-powered business or finance project showcasing analytical and ethical balance. They earn the AI + Business & Finance Specialist Credential and build a teaching portfolio including data visualizations, dashboards, and business storytelling assets.
+                    </p>
+                    <p class="text-base mt-3 font-semibold text-stem-gold">
+                        Graduates become AI Strategy Educators.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer Note (Appealing Design) -->
+        <footer class="mt-12 p-8 sm:p-10 rounded-2xl header-gradient text-white text-center shadow-2xl">
+            <p class="text-lg sm:text-xl font-light opacity-90">Certified STEM AI Architect™</p>
+            <p class="text-roboto text-3xl sm:text-4xl font-extrabold tracking-wider mt-1 mb-3">AI + Business & Finance Specialization</p>
+            <p class="text-base italic font-medium">Train to Teach & Lead Cross-Domain AI Education</p>
+            <p class="text-xs mt-4 opacity-70">Where Computer Science meets Medicine, Engineering, Business & the Arts.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
