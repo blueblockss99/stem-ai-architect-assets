@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The STEM AI Architect Quest</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-image: linear-gradient(135deg, #007BFF, #9B30FF);
+            background-attachment: fixed;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .card-body { font-family: 'Roboto', sans-serif; }
+        .game-card {
+            background-color: #FFFFFF;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.05);
+            transform: translateZ(0);
+        }
+        .btn-primary-gold {
+            background-color: #FFD700;
+            color: #333;
+            font-weight: 700;
+            border-radius: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .btn-primary-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255,215,0,0.4);
+        }
+        .btn-secondary {
+            background-color: #FFF5E6;
+            border: 2px solid #FFD700;
+            color: #333;
+            font-weight: 600;
+            border-radius: 0.75rem;
+            padding: 0.6rem 1.25rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-secondary:hover {
+            border-color: #FF9900;
+            background-color: #FFFBF5;
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .btn-option {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            text-align: left;
+            background-color: #FFF5E6;
+            border: 2px solid #FFD700;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        .btn-option:hover {
+            border-color: #FFD700;
+            background-color: #FFFFFF;
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .btn-option:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .progress-bar-container {
+            width: 100%;
+            height: 8px;
+            background-color: #E9EDF6;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .progress-bar-fill {
+            width: 0%;
+            height: 100%;
+            background-color: #FFD700;
+            border-radius: 4px;
+            transition: width 0.5s ease-out;
+        }
+        .game-screen {
+            display: none;
+            animation: fadeIn 0.6s ease-out;
+        }
+        .game-screen.active { display: block; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .persona-badge {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            margin: 0 auto 1rem;
+            animation: glow 2.5s infinite ease-in-out;
+            border: 6px solid;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 8px #FFD700, 0 0 12px #FFD700; }
+            50% { box-shadow: 0 0 25px #FFD700, 0 0 40px #FFD700; }
+        }
+        .persona-badge-empath { background-color: #FFF0F5; border-color: #FF69B4; }
+        .persona-badge-builder { background-color: #E6F7FF; border-color: #007BFF; }
+        .persona-badge-strategist { background-color: #F0FFF0; border-color: #32CD32; }
+        .persona-badge-visionary { background-color: #F8F6FF; border-color: #9B30FF; }
+        .persona-badge-dual {
+            background-image: linear-gradient(135deg, #E6F7FF 0%, #F8F6FF 100%);
+            border-color: #FFD700 !important;
+        }
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #FFD700;
+            opacity: 0.8;
+            z-index: 1000;
+            pointer-events: none;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            from { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            to { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+        .text-stem-purple { color: #9B30FF; }
+        .text-stem-blue { color: #007BFF; }
+        .text-stem-green { color: #32CD32; }
+        .text-stem-orange { color: #FF5733; }
+        .emoji-icon {
+            font-size: 2.2rem;
+            margin-right: 1rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 sm:p-6">
+
+    <div id="game-container" class="game-card w-full max-w-lg p-6 sm:p-10">
+
+        <!-- INTRO SCREEN -->
+        <div id="intro-screen" class="game-screen active text-center">
+            <h1 class="text-3xl font-bold text-gray-900 mb-4">
+                The STEM AI Architect Quest
+            </h1>
+            <p class="text-xl font-semibold text-gray-800 mb-3 card-body">
+                Discover Your Inner AI Mentor Type
+            </p>
+            <p class="text-lg text-gray-700 mb-8 card-body leading-relaxed max-w-md mx-auto">
+                In just <strong>six fun questions</strong>, we’ll reveal whether you’re an <span class="text-stem-purple">Empath</span>, <span class="text-stem-blue">Builder</span>, <span class="text-stem-green">Strategist</span>, or <span class="text-stem-orange">Visionary</span> — and which AI path lights you up most.
+            </p>
+            <p class="text-sm text-gray-600 mb-10 card-body italic">
+                This is just for <strong>inspiration</strong> — you’re free to explore any path (or mix them!). Unsure? Your <strong>Program Architect</strong> is here to help.
+            </p>
+            <button id="start-button" class="btn-primary-gold text-lg">
+                Let's Discover Your Type!
+            </button>
+        </div>
+
+        <!-- QUESTION SCREEN -->
+        <div id="question-screen" class="game-screen">
+            <div class="progress-bar-container">
+                <div id="progress-bar-fill" class="progress-bar-fill"></div>
+            </div>
+            <p id="progress-text" class="text-sm font-semibold text-gray-500 mb-4 text-center">Question 1 of 6</p>
+            
+            <h2 id="question-text" class="text-2xl font-bold text-gray-900 mb-6" style="min-height: 3em;" role="heading" aria-level="2"></h2>
+            
+            <div id="options-container" class="card-body" role="radiogroup" aria-labelledby="question-text"></div>
+        </div>
+
+        <!-- RESULT SCREEN -->
+        <div id="result-screen" class="game-screen text-center">
+            <div id="persona-badge" class="persona-badge mx-auto">
+                <span id="persona-icon" class="text-6xl"></span>
+            </div>
+            
+            <h2 id="persona-title" class="text-4xl font-extrabold text-gray-900 mb-3 mt-6 leading-tight"></h2>
+            <p id="persona-tagline" class="text-xl font-medium text-gray-700 mb-5 max874-w-md mx-auto"></p>
+
+            <div class="inline-block bg-gradient-to-r from-yellow-100 to-orange-100 px-6 py-3 rounded-full mb-6 border-2 border-yellow-400">
+                <p class="text-sm font-semibold text-gray-800 uppercase tracking-wider">Suggested Path</p>
+                <p id="persona-path" class="text-2xl font-bold text-gray-900 mt-1"></p>
+            </div>
+
+            <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-5 rounded-2xl shadow-inner mb-8 max-w-lg mx-auto border border-purple-200">
+                <p id="persona-note" class="text-base text-gray-700 leading-relaxed card-body"></p>
+            </div>
+
+            <div class="space-y-4 mb-8">
+                <h3 class="text-2xl font-bold text-gray-800">Congratulations, Future Architect!</h3>
+                <p class="text-base text-gray-600 max-w-md mx-auto card-body">
+                    You’ve unlocked your AI Mentor archetype — a reflection of your teaching superpowers.
+                </p>
+                <p class="text-base text-gray-600 max-w-md mx-auto card-body">
+                    Mix and match paths, follow your curiosity, and remember: <strong>every great mentor blends all four types</strong>.
+                </p>
+                <p class="text-base text-gray-600 max-w-md mx-auto card-body">
+                    Need guidance? Your <strong>Program Architect</strong> is just one message away.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="btn-secondary text-lg px-6 py-3 shadow-md">Explore All Paths</button>
+                <button class="btn-secondary text-lg px-6 py-3 shadow-md">Talk to Your Architect</button>
+                <button id="play-again-button" class="btn-secondary text-lg px-6 py-3 shadow-md">Play Again</button>
+            </div>
+
+            <p class="text-sm text-gray-500 mt-10 card-body italic">
+                Every educator is a blend of <span class="font-semibold">Empath</span>, <span class="font-semibold">Builder</span>, <span class="font-semibold">Strategist</span>, and <span class="font-semibold">Visionary</span>.
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        // REAL EMOJIS — NOT TEXT
+        const questions = [
+            { text: "Q1: When you explore a new AI tool…", options: [
+                { text: "I jump right in and build something small.", icon: "🛠️", persona: "builder" },
+                { text: "I wonder how it could help people.", icon: "❤️", persona: "empath" },
+                { text: "I look for what data or insight it reveals.", icon: "📈", persona: "strategist" },
+                { text: "I explore what it can create or express.", icon: "🎨", persona: "visionary" }
+            ]},
+            { text: "Q2: The best classroom moment for you is when…", options: [
+                { text: "A model finally works perfectly after testing.", icon: "🛠️", persona: "builder" },
+                { text: "A student feels proud, safe, and seen.", icon: "❤️", persona: "empath" },
+                { text: "A dashboard changes how someone decides.", icon: "📈", persona: "strategist" },
+                { text: "A story, artwork, or demo moves the audience.", icon: "🎨", persona: "visionary" }
+            ]},
+            { text: "Q3: Faced with a messy real-world problem, you first…", options: [
+                { text: "Sketch the system or process.", icon: "🛠️", persona: "builder" },
+                { text: "Talk to people and collect stories.", icon: "❤️", persona: "empath" },
+                { text: "Gather numbers and look for patterns.", icon: "📈", persona: "strategist" },
+                { text: "Brainstorm new metaphors or designs.", icon: "🎨", persona: "visionary" }
+            ]},
+            { text: "Q4: Pick the activity that excites you most.", options: [
+                { text: "Build a Teachable Machine demo that recognizes objects.", icon: "🛠️", persona: "builder" },
+                { text: "Run a role-play about AI ethics in healthcare.", icon: "❤️", persona: "empath" },
+                { text: "Visualize spending trends with Datawrapper.", icon: "📈", persona: "strategist" },
+                { text: "Create AI-generated art to remix culture.", icon: "🎨", persona: "visionary" }
+            ]},
+            { text: "Q5: Which AI mistake worries you the most?", options: [
+                { text: "A system that fails or isn’t tested safely.", icon: "🛠️", persona: "builder" },
+                { text: "Data that violates privacy or consent.", icon: "❤️", persona: "empath" },
+                { text: "Graphs that mislead decisions.", icon: "📈", persona: "strategist" },
+                { text: "Images that reinforce stereotypes.", icon: "🎨", persona: "visionary" }
+            ]},
+            { text: "Q6: If your class had one free 30-minute block…", options: [
+                { text: "Prototype a quick automation or sensor.", icon: "🛠️", persona: "builder" },
+                { text: "Discuss a real-world AI ethics case.", icon: "❤️", persona: "empath" },
+                { text: "Forecast a school-wide trend and share results.", icon: "📈", persona: "strategist" },
+                { text: "Curate a creative exhibit or digital story.", icon: "🎨", persona: "visionary" }
+            ]}
+        ];
+
+        const resultsData = {
+            empath: { title: "The Empath", icon: "❤️", tagline: "You teach with empathy and purpose.", path: "AI + Medicine", note: "You care deeply about people, ethics, and human-centered AI.", badgeClass: "persona-badge-empath" },
+            builder: { title: "The Builder", icon: "🛠️", tagline: "You turn ideas into working systems.", path: "AI + Engineering", note: "You love prototyping, problem-solving, and making things work.", badgeClass: "persona-badge-builder" },
+            strategist: { title: "The Strategist", icon: "📈", tagline: "You think in data and decisions.", path: "AI + Business & Finance", note: "You excel at clarity, impact, and evidence-based insights.", badgeClass: "persona-badge-strategist" },
+            visionary: { title: "The Visionary", icon: "🎨", tagline: "You connect AI with art, culture, and meaning.", path: "AI + Arts & Humanities", note: "You see technology as a creative partner and storyteller.", badgeClass: "persona-badge-visionary" }
+        };
+
+        let currentQuestionIndex = 0;
+        let scores = { empath: 0, builder: 0, strategist: 0, visionary: 0 };
+
+        const introScreen = document.getElementById('intro-screen');
+        const questionScreen = document.getElementById('question-screen');
+        const resultScreen = document.getElementById('result-screen');
+        const startButton = document.getElementById('start-button');
+        const playAgainButton = document.getElementById('play-again-button');
+        const progressBarFill = document.getElementById('progress-bar-fill');
+        const progressText = document.getElementById('progress-text');
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const personaBadge = document.getElementById('persona-badge');
+        const personaIcon = document.getElementById('persona-icon');
+        const personaTitle = document.getElementById('persona-title');
+        const personaTagline = document.getElementById('persona-tagline');
+        const personaPath = document.getElementById('persona-path');
+        const personaNote = document.getElementById('persona-note');
+
+        function startGame() {
+            currentQuestionIndex = 0;
+            scores = { empath: 0, builder: 0, strategist: 0, visionary: 0 };
+            showScreen(questionScreen);
+            showQuestion();
+        }
+
+        function showQuestion() {
+            if (currentQuestionIndex >= questions.length) {
+                showResult();
+                return;
+            }
+
+            const q = questions[currentQuestionIndex];
+            progressText.textContent = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+            // Use 1-based index calculation for width, ensuring it hits 100% on the last question
+            progressBarFill.style.width = `${((currentQuestionIndex + 1) / questions.length) * 100}%`; 
+            questionText.textContent = q.text;
+            optionsContainer.innerHTML = '';
+
+            q.options.forEach(option => {
+                const btn = document.createElement('button');
+                btn.className = 'btn-option';
+                btn.innerHTML = `<span class="emoji-icon">${option.icon}</span><span>${option.text}</span>`;
+                btn.onclick = () => selectAnswer(option.persona);
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function selectAnswer(persona) {
+            document.querySelectorAll('#options-container button').forEach(btn => {
+                btn.disabled = true;
+                btn.style.opacity = '0.6';
+            });
+
+            scores[persona]++;
+            currentQuestionIndex++;
+
+            const progress = (currentQuestionIndex / questions.length) * 100;
+            progressBarFill.style.width = `${progress}%`;
+
+            setTimeout(() => {
+                // Ensure progress bar update is visible before transition
+                if (currentQuestionIndex >= questions.length) {
+                    progressBarFill.style.width = '100%';
+                    showResult();
+                } else {
+                    showQuestion();
+                }
+            }, 300);
+        }
+
+        function showResult() {
+            const maxScore = Math.max(...Object.values(scores));
+            const winners = Object.keys(scores).filter(p => scores[p] === maxScore);
+
+            personaBadge.className = 'persona-badge';
+
+            if (winners.length > 1) {
+                // Handle Dual Archetypes
+                // Filter to the top two for display if there are more than two ties (e.g., if all 6 questions were split 2, 2, 1, 1)
+                const primaryWinners = winners.slice(0, 2).sort(); 
+                const r1 = resultsData[primaryWinners[0]];
+                const r2 = resultsData[primaryWinners[1]];
+                const blendKey = primaryWinners.join('_');
+
+                const hybridPaths = {
+                    'empath_builder': 'AI + Healthcare Robotics',
+                    'empath_strategist': 'AI + Public Health Analytics',
+                    'empath_visionary': 'AI + Creative Therapy & Wellness',
+                    'builder_strategist': 'AI + Smart Infrastructure',
+                    'builder_visionary': 'AI + Interactive Design & Prototyping',
+                    'strategist_visionary': 'AI + Data-Driven Storytelling'
+                };
+
+                const hybridPath = hybridPaths[blendKey] || `${r1.path} OR ${r2.path}`;
+
+                personaBadge.classList.add('persona-badge-dual');
+                personaIcon.innerHTML = `<span class="text-5xl">${r1.icon}</span><span class="text-5xl ml-1">${r2.icon}</span>`;
+                personaTitle.textContent = `The ${r1.title.replace('The ', '')} & ${r2.title.replace('The ', '')}`;
+                personaTagline.textContent = `A powerful blend of two mentor types!`;
+                personaPath.textContent = hybridPath;
+                // Removed ** for bolding
+                personaNote.textContent = `You're a rare blend of the ${r1.title.replace('The ', '')} and ${r2.title.replace('The ', '')} — your strength lies in combining empathy with creativity, systems with storytelling, or data with design. This hybrid path is made for you!`;
+            } else {
+                // Handle Single Archetype
+                const r = resultsData[winners[0]];
+                personaBadge.classList.add(r.badgeClass);
+                personaIcon.textContent = r.icon;
+                personaTitle.textContent = r.title;
+                personaTagline.textContent = r.tagline;
+                personaPath.textContent = r.path;
+                personaNote.textContent = `${r.note} This is just a friendly suggestion — you can explore any AI path that excites you.`;
+            }
+
+            showScreen(resultScreen);
+            showConfetti();
+        }
+
+        function showScreen(screen) {
+            document.querySelectorAll('.game-screen').forEach(s => s.classList.remove('active'));
+            screen.classList.add('active');
+        }
+
+        function showConfetti() {
+            // Remove previous confetti before generating new ones
+            document.querySelectorAll('.confetti').forEach(c => c.remove());
+
+            const isMobile = window.innerWidth < 640;
+            const count = isMobile ? 40 : 100;
+            const colors = ['#FFD700', '#007BFF', '#9B30FF', '#FFFFFF'];
+
+            for (let i = 0; i < count; i++) {
+                const c = document.createElement('div');
+                c.classList.add('confetti');
+                c.style.left = Math.random() * 100 + 'vw';
+                c.style.animationDelay = Math.random() * 3 + 's';
+                c.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                
+                // Add some star-shaped confetti for variety
+                if (Math.random() > 0.7) {
+                    c.style.width = '10px';
+                    c.style.height = '10px';
+                    c.style.clipPath = 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
+                }
+                document.body.appendChild(c);
+                setTimeout(() => c.remove(), 5000);
+            }
+        }
+
+        function goToIntro() {
+            showScreen(introScreen);
+        }
+
+        startButton.addEventListener('click', startGame);
+        playAgainButton.addEventListener('click', goToIntro);
+    </script>
+</body>
+</html>
