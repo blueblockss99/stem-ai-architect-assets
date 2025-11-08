@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI + Engineering Specialization (Compact)</title>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8faff; /* Very light blue background for vibrancy */
+        }
+        /* Custom Colors based on STEM AI Studio Palette */
+        .text-stem-purple { color: #9B30FF; }
+        .bg-stem-purple { background-color: #9B30FF; }
+        .bg-stem-blue { background-color: #007BFF; }
+        .bg-stem-orange { background-color: #FF5733; }
+        .bg-stem-green { background-color: #32CD32; }
+        .hover-lift:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+
+    <script>
+        // Tailwind Configuration for easy color access
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'stem-blue': '#007BFF',
+                        'stem-orange': '#FF5733',
+                        'stem-green': '#32CD32',
+                        'stem-purple': '#9B30FF',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased text-gray-900">
+
+    <div id="app" class="max-w-6xl mx-auto p-4 sm:p-6 lg:p-10">
+
+        <!-- Header Block -->
+        <header class="bg-gradient-to-r from-stem-blue to-stem-purple text-white p-8 sm:p-12 rounded-3xl shadow-2xl mb-12">
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
+                AI + Engineering Specialization
+            </h1>
+            <p class="mt-3 text-xl sm:text-2xl font-light opacity-90">
+                Intelligent Systems Meet Real-World Innovation
+            </p>
+        </header>
+
+        <!-- Section: Who This Path Is For -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-800 mb-6 border-b-4 border-stem-purple pb-2 flex items-center">
+                 <!-- SVG: Target -->
+                <svg class="w-8 h-8 mr-3 text-stem-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.59 13a2 2 0 002 2l1.41-1.41M6.41 13a2 2 0 01-2-2L3 9.59M12 21v-2.25M12 3v2.25m-9 6h2.25m14.5 0H21"></path></svg>
+                Who This Path Is For
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-blue transition duration-300 hover-lift">
+                    <p class="font-black text-xl text-stem-blue mb-2">Educators & Mentors</p>
+                    <p class="text-sm text-gray-700">STEM educators, robotics mentors, and makerspace facilitators.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-orange transition duration-300 hover-lift">
+                    <p class="font-black text-xl text-stem-orange mb-2">Technologists & Grads</p>
+                    <p class="text-sm text-gray-700">Engineering graduates, technologists, and applied science instructors.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-purple transition duration-300 hover-lift">
+                    <p class="font-black text-xl text-stem-purple mb-2">Design Professionals</p>
+                    <p class="text-sm text-gray-700">Professionals integrating AI-driven design, modeling, or simulation.</p>
+                </div>
+            </div>
+            <p class="mt-6 text-base italic text-gray-600 border-l-4 border-gray-300 pl-4">
+                This path is for those who want to bridge physical systems and AI logic — bringing machine learning to robotics, automation, and smart design.
+            </p>
+        </section>
+
+        <!-- Section: What You'll Learn (Skills & Outcomes) -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-800 mb-6 border-b-4 border-stem-green pb-2 flex items-center">
+                 <!-- SVG: Book -->
+                <svg class="w-8 h-8 mr-3 text-stem-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12a.75.75 0 110-1.5.75.75 0 010 1.5zM12 17.25a.75.75 0 110-1.5.75.75 0 010 1.5z"></path></svg>
+                What You’ll Learn
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- SKILLS -->
+                <div>
+                    <h3 class="text-xl font-bold text-stem-green mb-3">Core Skill Focus</h3>
+                    <ul class="space-y-3">
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-green">
+                            <span class="flex-shrink-0 text-stem-green mr-3 mt-1">•</span>
+                            <p class="text-sm text-gray-700">Connect design thinking with AI problem-solving methods.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-green">
+                            <span class="flex-shrink-0 text-stem-green mr-3 mt-1">•</span>
+                            <p class="text-sm text-gray-700">Facilitate data-driven design using sensor, traffic, or environmental data.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-green">
+                            <span class="flex-shrink-0 text-stem-green mr-3 mt-1">•</span>
+                            <p class="text-sm text-gray-700">Understand ethical and safety implications in automation and predictive maintenance.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- OUTCOMES -->
+                <div>
+                    <h3 class="text-xl font-bold text-stem-blue mb-3">Key Learning Outcomes</h3>
+                    <ul class="space-y-3">
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-blue">
+                            <span class="flex-shrink-0 text-stem-blue mr-3 mt-1">✓</span>
+                            <p class="text-sm text-gray-700">Teach how AI models can predict, classify, and optimize engineering processes.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-blue">
+                            <span class="flex-shrink-0 text-stem-blue mr-3 mt-1">✓</span>
+                            <p class="text-sm text-gray-700">Integrate computational thinking and sustainability into classroom labs.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-blue">
+                            <span class="flex-shrink-0 text-stem-blue mr-3 mt-1">✓</span>
+                            <p class="text-sm text-gray-700">Develop empathy-centered design mindsets in technical contexts.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Capstones & Mini-Labs (Vibrant Cards) -->
+        <section class="mb-12">
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Capstones -->
+                <div class="p-6 rounded-xl shadow-2xl bg-white border-t-8 border-stem-orange">
+                    <h3 class="text-2xl font-bold text-stem-orange mb-4 flex items-center">
+                         <!-- SVG: Gear -->
+                        <svg class="w-6 h-6 mr-3 text-stem-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"></path></svg>
+                        Sample Capstones
+                    </h3>
+                    <div class="space-y-4">
+                        <!-- Capstone Item -->
+                        <div class="bg-orange-50 p-4 rounded-lg border border-stem-orange/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base">Smart Sorter Bot</p>
+                            <p class="text-xs text-gray-600 mt-1">Classifies materials using image recognition. <span class="font-medium text-stem-orange">(AI Focus: Computer Vision)</span></p>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg border border-stem-orange/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base">Energy Optimizer Dashboard</p>
+                            <p class="text-xs text-gray-600 mt-1">Detects anomalies and suggests efficiency improvements using smart home data. <span class="font-medium text-stem-orange">(AI Focus: Predictive Analytics)</span></p>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg border border-stem-orange/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base">Bridge Safety Monitor</p>
+                            <p class="text-xs text-gray-600 mt-1">Simulates a structural health system that detects vibration patterns or surface wear. <span class="font-medium text-stem-orange">(AI Focus: Sensor data analysis)</span></p>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg border border-stem-orange/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base">Traffic Flow Simulator</p>
+                            <p class="text-xs text-gray-600 mt-1">Predicts congestion and proposes timing adjustments for smart intersections. <span class="font-medium text-stem-orange">(AI Focus: Predictive Modeling)</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini-Labs -->
+                <div class="p-6 rounded-xl shadow-2xl bg-white border-t-8 border-stem-green">
+                    <h3 class="text-2xl font-bold text-stem-green mb-4 flex items-center">
+                        <!-- SVG: Beaker -->
+                        <svg class="w-6 h-6 mr-3 text-stem-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m6.75 12V21a2.25 2.25 0 01-2.25 2.25H10.5m-1.5-6v-6.75m0 0a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75v3.75m2.25 0v1.5"></path></svg>
+                        Starter Mini-Labs
+                    </h3>
+                    <div class="space-y-4">
+                         <!-- Mini-Lab Item -->
+                        <div class="bg-green-50 p-4 rounded-lg border border-stem-green/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base">Object Classifier for Automation</p>
+                            <p class="text-xs text-gray-600 mt-1">Tool: Teachable Machine. Focus: Robotics sorting logic.</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-stem-green/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base">Prototype Designer</p>
+                            <p class="text-xs text-gray-600 mt-1">Tool: Tinkercad + Canva. Focus: Visual mockup of AI-assisted systems.</p>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-stem-green/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base">System Predictor</p>
+                            <p class="text-xs text-gray-600 mt-1">Tool: Lobe / Excel. Focus: Predicting system performance from sensor data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Tool Stack & Safety -->
+        <section class="mb-12">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Tool Stack -->
+                <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-lg border-t-8 border-stem-blue">
+                    <h3 class="text-2xl font-bold text-stem-blue mb-4 flex items-center">
+                         <!-- SVG: Tools -->
+                        <svg class="w-6 h-6 mr-3 text-stem-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        Core Tool Stack
+                    </h3>
+                    <div class="space-y-3 text-sm">
+                        <p><span class="text-stem-purple">No-Code AI:</span> Teachable Machine, Lobe, ChatGPT, (Runway ML, AutoML)</p>
+                        <p><span class="text-stem-purple">Simulation & Design:</span> Tinkercad, Scratch for IoT logic, (Fusion 360, Simulink)</p>
+                        <p><span class="text-stem-purple">Visualization:</span> Canva, Datawrapper, Power BI (Copilot), (Tableau Public)</p>
+                    </div>
+                    <p class="mt-4 text-xs italic text-gray-500">
+                        The stack ensures prototyping and demonstration without heavy infrastructure.
+                    </p>
+                </div>
+
+                <!-- Data & Safety -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-8 border-red-500">
+                    <h3 class="text-2xl font-bold text-red-600 mb-4 flex items-center">
+                        <!-- SVG: Lock -->
+                        <svg class="w-6 h-6 mr-3 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6-10V8a6 6 0 1112 0v2H6z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M18 10V8a6 6 0 10-12 0v2"></path><path stroke-linecap="round" stroke-linejoin="round" d="M18 20a2 2 0 01-2 2H8a2 2 0 01-2-2v-4a2 2 0 012-2h8a2 2 0 012 2v4z"></path></svg>
+                        Data & Safety Rules
+                    </h3>
+                    <ul class="list-disc ml-4 space-y-1 text-sm text-gray-700">
+                        <li>Only simulated or anonymized data.</li>
+                        <li>Use digital twins (virtual representations) over live robotics.</li>
+                        <li>Emphasize ethical AI in automation (fairness, safety, transparency).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Mentorship & Outcome -->
+        <section class="mb-12">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mentorship Note -->
+                <div class="bg-stem-purple/10 p-6 rounded-xl shadow-lg border-l-8 border-stem-purple">
+                    <h3 class="text-2xl font-bold text-stem-purple mb-3 flex items-center">
+                        <!-- SVG: Mentorship -->
+                        <svg class="w-6 h-6 mr-3 text-stem-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20v-2c0-.523-.213-1-1.149-1m0 0a1.99 1.99 0 010-3.998m1.149 1.149L12 12V4m6 16v-2.5l-3-3m0 0l-3 3v2.5M3 8a4 4 0 116 0 4 4 0 01-6 0z"></path></svg>
+                        SME Review & Mentorship
+                    </h3>
+                    <p class="text-sm text-gray-700">
+                        Cohorts are paired with an Engineering Subject Matter Expert (SME) who reviews scenario design accuracy and safety compliance. Mentors host "Design Review Fridays" and focus on translating AI predictions into real-world design improvements.
+                    </p>
+                </div>
+
+                <!-- Outcome & Portfolio -->
+                <div class="bg-stem-orange/10 p-6 rounded-xl shadow-lg border-l-8 border-stem-orange">
+                    <h3 class="text-2xl font-bold text-stem-orange mb-3 flex items-center">
+                        <!-- SVG: Trophy -->
+                        <svg class="w-6 h-6 mr-3 text-stem-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M19 21V7a2 2 0 00-2-2H7a2 2 0 00-2 2v14M12 21a2 2 0 002-2H10a2 2 0 002 2zm7-11H5"></path></svg>
+                        Certification & Portfolio
+                    </h3>
+                    <p class="text-sm text-gray-700">
+                        Participants earn the AI + Engineering Specialist Certificate and complete an AI-powered engineering capstone. Graduates add three verified mini-labs and a mentor-reviewed capstone to their public portfolio.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer Note (Appealing Design) -->
+        <footer class="mt-12 p-8 sm:p-10 rounded-2xl bg-gradient-to-r from-stem-purple to-stem-blue text-white text-center shadow-2xl">
+            <p class="text-lg sm:text-xl font-light opacity-90">Certified STEM AI Architect™</p>
+            <p class="text-3xl sm:text-4xl font-extrabold tracking-wider mt-1 mb-3">AI + Engineering Specialization</p>
+            <p class="text-base italic font-medium">Train to Teach & Lead Cross-Domain AI Education</p>
+        </footer>
+    </div>
+
+</body>
+</html>
