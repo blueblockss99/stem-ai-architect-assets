@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certified STEM AI Architect™ Program Requirements</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F0F0; /* Light Gray Background */
+            color: #000000; /* Main Text Color: Black */
+        }
+        /* Custom Tailwind Configuration for new palette */
+        :root {
+            --color-primary: #007BFF; /* Electric Blue */
+            --color-secondary: #FF5733; /* Sunset Orange */
+            --color-accent: #32CD32; /* Lime Green */
+            --color-pop: #9B30FF; /* Vivid Purple */
+            --color-highlight: #FFD700; /* Bright Yellow */
+        }
+
+        /* Custom scrollbar for better aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #E0E0E0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-primary); /* Electric Blue */
+            border-radius: 4px;
+        }
+
+        .card {
+            background-color: #FFFFFF; /* Pure White Card */
+            border: 1px solid #D0D0D0;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.3s ease;
+        }
+        .primary-text {
+            color: var(--color-primary); /* Electric Blue */
+        }
+        .accent-bg-light {
+            background-color: rgba(50, 205, 50, 0.1); /* Light Lime Green BG */
+        }
+        /* Styles for the accordion icon transition */
+        .rotate-90-active {
+            transform: rotate(90deg);
+        }
+        .rotate-0-inactive {
+            transform: rotate(0deg);
+        }
+        /* Hiding content with max-height for smooth transition */
+        .collapsible-content {
+            max-height: 2000px; /* Large enough to contain all content */
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+        }
+        .collapsible-content.collapsed {
+            max-height: 0;
+        }
+    </style>
+</head>
+<body class="text-gray-900 min-h-screen p-4 md:p-10">
+
+    <div class="max-w-7xl mx-auto">
+
+        <!-- NEW: Dedicated Blue Banner (Primary Color) -->
+        <div class="text-center p-6 md:p-10 mb-12 rounded-2xl shadow-xl" style="background-color: var(--color-primary); color: #FFFFFF;">
+            <p class="text-xl md:text-2xl font-semibold opacity-80 mb-2">The Official Program For</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-wider leading-tight">
+                Certified STEM AI Architect™
+            </h1>
+        </div>
+        
+        <!-- Secondary Header and Objective (White Card) -->
+        <header class="text-center mb-12 bg-white p-6 rounded-xl shadow-lg">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3 leading-tight">
+                Requirements & Program Flow
+            </h2>
+            <p class="mt-6 text-lg text-gray-600 border-b border-gray-300 pb-6">
+                <span class="primary-text">Lesson Objective:</span> To ensure every participant clearly understands the technical, time, and participation requirements for successful certification, and to help them visualize the full course journey.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Card 1: Tech & Access Requirements (Collapsible) -->
+            <div class="lg:col-span-1">
+                <div class="card p-8 rounded-2xl h-full">
+                    <button class="accordion-trigger flex justify-between items-center w-full pb-3 border-b-4 text-left" data-target="tech-content" data-icon="tech-icon" style="border-color: var(--color-secondary);">
+                        <h3 class="text-3xl font-extrabold text-gray-900">
+                            Tech & Access Requirements
+                        </h3>
+                        <span id="tech-icon" class="text-3xl primary-text transform transition duration-300 rotate-0-inactive">▼</span>
+                    </button>
+                    
+                    <div id="tech-content" class="collapsible-content pt-6 space-y-8">
+                        <section>
+                            <h4 class="text-2xl font-extrabold mb-4 primary-text">Minimum Setup</h4>
+                            <ul class="space-y-4 text-gray-700 text-base">
+                                <li class="flex items-start">
+                                    <span class="text-2xl mr-4 mt-0.5 flex-shrink-0 primary-text">💻</span>
+                                    Laptop or desktop computer (<span class="font-medium">8 GB RAM recommended</span>)
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-2xl mr-4 mt-0.5 flex-shrink-0 primary-text">🌐</span>
+                                    Stable internet connection (<span class="font-medium">10 Mbps or higher</span>)
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-2xl mr-4 mt-0.5 flex-shrink-0 primary-text">🖱️</span>
+                                    Browser: Chrome or Edge (<span class="font-medium">latest version</span>)
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-2xl mr-4 mt-0.5 flex-shrink-0 primary-text">🎧</span>
+                                    Headset or earphones for live sessions / recordings
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-2xl mr-4 mt-0.5 flex-shrink-0 text-gray-500">🧰</span>
+                                    <span class="font-semibold">Free tool accounts needed:</span> ChatGPT, Teachable Machine, Canva, Scratch, Datawrapper (optional: Lobe or Runway ML)
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section>
+                            <h4 class="text-2xl font-extrabold mb-4" style="color: var(--color-pop);">Optional Enhancers</h4>
+                            <ul class="space-y-4 text-gray-700 text-base">
+                                <li class="flex items-start">
+                                    <span class="text-2xl mr-4 mt-0.5 flex-shrink-0 text-gray-500">📷</span>
+                                    Webcam for live Studio Sessions (Modules 3 & 5)
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-2xl mr-4 mt-0.5 flex-shrink-0 text-gray-500">💾</span>
+                                    Google Drive or OneDrive for file backup
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Time & Commitment (Collapsible) -->
+            <div class="lg:col-span-2">
+                <div class="card p-8 rounded-2xl mb-8">
+                    <button class="accordion-trigger flex justify-between items-center w-full pb-3 border-b-4 text-left" data-target="time-content" data-icon="time-icon" style="border-color: var(--color-secondary);">
+                        <h3 class="text-3xl font-extrabold text-gray-900">
+                            Time & Commitment
+                        </h3>
+                        <span id="time-icon" class="text-3xl primary-text transform transition duration-300 rotate-0-inactive">▼</span>
+                    </button>
+                    
+                    <div id="time-content" class="collapsible-content pt-6">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left table-auto border-separate border-spacing-y-2">
+                                <thead class="bg-gray-200 text-gray-800 uppercase text-sm leading-normal">
+                                    <tr>
+                                        <th class="py-4 px-6 text-left rounded-l-lg">Component</th>
+                                        <th class="py-4 px-6 text-center">Hours (approx.)</th>
+                                        <th class="py-4 px-6 text-left rounded-r-lg">Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-700 text-base font-medium">
+                                    <tr class="bg-white border-b border-gray-100 shadow-sm hover:shadow-lg transition duration-200 rounded-lg">
+                                        <td class="py-4 px-6 font-semibold rounded-l-lg">Self-paced learning</td>
+                                        <td class="py-4 px-6 text-center" style="color: var(--color-accent); font-weight: 500;">8–10 hrs / week</td>
+                                        <td class="py-4 px-6 rounded-r-lg">Reading modules, building demos, reflections</td>
+                                    </tr>
+                                    <tr class="bg-white border-b border-gray-100 shadow-sm hover:shadow-lg transition duration-200 rounded-lg">
+                                        <td class="py-4 px-6 font-semibold rounded-l-lg">Live Studio Lessons</td>
+                                        <td class="py-4 px-6 text-center" style="color: var(--color-accent); font-weight: 500;">9 sessions × 90 min</td>
+                                        <td class="py-4 px-6 rounded-r-lg">Orientation, No-Code Lab, Capstone Showcase</td>
+                                    </tr>
+                                    <tr class="bg-white border-b border-gray-100 shadow-sm hover:shadow-lg transition duration-200 rounded-lg">
+                                        <td class="py-4 px-6 font-semibold rounded-l-lg">Capstone Project Work</td>
+                                        <td class="py-4 px-6 text-center" style="color: var(--color-secondary); font-weight: 500;">35–45 hours</td>
+                                        <td class="py-4 px-6 rounded-r-lg">Research, lesson design, SME consultation</td>
+                                    </tr>
+                                    <tr class="bg-white shadow-sm hover:shadow-lg transition duration-200 rounded-lg">
+                                        <td class="py-4 px-6 font-semibold rounded-l-lg">Peer Feedback / Community</td>
+                                        <td class="py-4 px-6 text-center" style="color: var(--color-accent); font-weight: 500;">1 hr / week</td>
+                                        <td class="py-4 px-6 rounded-r-lg">Discord threads, showcases, Q&A</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="mt-6 text-xl text-gray-600">
+                            <span class="text-gray-900">Expected Duration:</span> 12–16 weeks (standard) or 6–8 weeks (fast-track).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program Flow and Checklist Grid (Collapsible, within two columns) -->
+            <div class="lg:col-span-3">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- Card 3: Program Flow (Collapsible) -->
+                    <div class="card p-8 rounded-2xl">
+                        <button class="accordion-trigger flex justify-between items-center w-full pb-3 border-b-4 text-left" data-target="flow-content" data-icon="flow-icon" style="border-color: var(--color-primary);">
+                            <h3 class="text-3xl font-extrabold text-gray-900">
+                                Program Flow – Your Journey at a Glance
+                            </h3>
+                            <span id="flow-icon" class="text-3xl primary-text transform transition duration-300 rotate-0-inactive">▼</span>
+                        </button>
+                        
+                        <div id="flow-content" class="collapsible-content pt-6">
+                            <ol class="space-y-4 text-gray-700">
+                                <!-- Stage 1: Bright Yellow -->
+                                <li class="p-4 rounded-xl border-l-4" style="border-left-color: var(--color-highlight); background-color: rgba(255, 215, 0, 0.1);">
+                                    <span class="text-lg font-extrabold" style="color: var(--color-highlight);">Stage 1: Orientation (Module 0)</span>
+                                    <ul class="mt-2 text-sm space-y-1 ml-4 list-disc list-inside font-medium">
+                                        <li>Meet the community</li>
+                                        <li>Understand mission</li>
+                                        <li>Select your specialization path</li>
+                                    </ul>
+                                </li>
+                                <!-- Stage 2: Electric Blue -->
+                                <li class="p-4 rounded-xl border-l-4" style="border-left-color: var(--color-primary); background-color: rgba(0, 123, 255, 0.1);">
+                                    <span class="text-lg font-extrabold primary-text">Stage 2: Foundations & Pedagogy (Modules 1–2)</span>
+                                    <ul class="mt-2 text-sm space-y-1 ml-4 list-disc list-inside font-medium">
+                                        <li>Develop AI teaching philosophy</li>
+                                        <li>Acquire mentor skills</li>
+                                    </ul>
+                                </li>
+                                <!-- Stage 3: Vivid Purple -->
+                                <li class="p-4 rounded-xl border-l-4" style="border-left-color: var(--color-pop); background-color: rgba(155, 48, 255, 0.1);">
+                                    <span class="text-lg font-extrabold" style="color: var(--color-pop);">Stage 3: Tools & Creativity (Module 3)</span>
+                                    <ul class="mt-2 text-sm space-y-1 ml-4 list-disc list-inside font-medium">
+                                        <li>Hands-on with no-code AI tools</li>
+                                        <li>Design a micro-demo</li>
+                                    </ul>
+                                </li>
+                                <!-- Stage 4: Sunset Orange -->
+                                <li class="p-4 rounded-xl border-l-4" style="border-left-color: var(--color-secondary); background-color: rgba(255, 87, 51, 0.1);">
+                                    <span class="text-lg font-extrabold" style="color: var(--color-secondary);">Stage 4: Cross-Domain Connections (Module 4)</span>
+                                    <ul class="mt-2 text-sm space-y-1 ml-4 list-disc list-inside font-medium">
+                                        <li>Explore AI in Medicine</li>
+                                        <li>Explore AI in Engineering, Business, and Arts</li>
+                                    </ul>
+                                </li>
+                                <!-- Stage 5: Lime Green -->
+                                <li class="p-4 rounded-xl border-l-4" style="border-left-color: var(--color-accent); background-color: rgba(50, 205, 50, 0.1);">
+                                    <span class="text-lg font-extrabold" style="color: var(--color-accent);">Stage 5: Capstone & Dual Review (Module 5)</span>
+                                    <ul class="mt-2 text-sm space-y-1 ml-4 list-disc list-inside font-medium">
+                                        <li>Build your real-world AI lesson</li>
+                                        <li>Receive AI Architect + SME feedback</li>
+                                    </ul>
+                                </li>
+                                <!-- Stage 6: Primary/Lime Green -->
+                                <li class="p-4 rounded-xl border-l-4" style="border-left-color: var(--color-accent); background-color: rgba(50, 205, 50, 0.1);">
+                                    <span class="text-lg font-extrabold" style="color: var(--color-accent);">Stage 6: Certification & Growth (Module 6)</span>
+                                    <ul class="mt-2 text-sm space-y-1 ml-4 list-disc list-inside font-medium">
+                                        <li>Complete review, earn credential</li>
+                                        <li>Join alumni network</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Certification Checklist (Collapsible) -->
+                    <div class="card p-8 rounded-2xl">
+                        <button class="accordion-trigger flex justify-between items-center w-full pb-3 border-b-4 text-left" data-target="checklist-content" data-icon="checklist-icon" style="border-color: var(--color-primary);">
+                            <h3 class="text-3xl font-extrabold text-gray-900">
+                                Certification Requirements Checklist
+                            </h3>
+                            <span id="checklist-icon" class="text-3xl primary-text transform transition duration-300 rotate-0-inactive">▼</span>
+                        </button>
+
+                        <div id="checklist-content" class="collapsible-content pt-6">
+                            <p class="text-xl mb-6 text-gray-600">
+                                To be certified as a STEM AI Architect™, you must:
+                            </p>
+                            <ul class="space-y-5 text-gray-800">
+                                <li class="flex items-start text-lg">
+                                    <span class="text-2xl mr-4 flex-shrink-0" style="color: var(--color-primary);">🚀</span>
+                                    <span class="pt-0.5">Complete all modules (0–6) and required quizzes/activities</span>
+                                </li>
+                                <li class="flex items-start text-lg accent-bg-light p-2 rounded-lg -mx-2">
+                                    <span class="text-2xl mr-4 flex-shrink-0" style="color: var(--color-accent);">💡</span>
+                                    <span class="pt-0.5">Build & upload <span>two micro AI demos</span> (Module 3)</span>
+                                </li>
+                                <li class="flex items-start text-lg">
+                                    <span class="text-2xl mr-4 flex-shrink-0" style="color: var(--color-primary);">🗣️</span>
+                                    <span class="pt-0.5">Teach at least <span>three demo classes</span> (live or recorded)</span>
+                                </li>
+                                <li class="flex items-start text-lg">
+                                    <span class="text-2xl mr-4 flex-shrink-0" style="color: var(--color-primary);">🤝</span>
+                                    <span class="pt-0.5">Receive at least one structured peer review on a demo class</span>
+                                </li>
+                                <li class="flex items-start text-lg">
+                                    <span class="text-2xl mr-4 flex-shrink-0" style="color: var(--color-primary);">🗓️</span>
+                                    <span class="pt-0.5">Participate in at least <span>two live Studio Sessions</span> or peer discussions</span>
+                                </li>
+                                <li class="flex items-start text-lg">
+                                    <span class="text-2xl mr-4 flex-shrink-0" style="color: var(--color-secondary);">📦</span>
+                                    <span class="pt-0.5">Submit final capstone lesson pack (Module 5)</span>
+                                </li>
+                                <li class="flex items-start text-lg accent-bg-light p-2 rounded-lg -mx-2">
+                                    <span class="text-2xl mr-4 flex-shrink-0" style="color: var(--color-accent);">🏅</span>
+                                    <span class="pt-0.5">Receive <span>dual approval</span> (AI Architect + SME)</span>
+                                </li>
+                                <li class="flex items-start text-lg">
+                                    <span class="text-2xl mr-4 flex-shrink-0" style="color: var(--color-secondary);">✍️</span>
+                                    <span class="pt-0.5">Submit ethics pledge & final certification form (Module 6)</span>
+                                </li>
+                                <li class="flex items-start text-lg">
+                                    <span class="text-2xl mr-4 flex-shrink-0" style="color: var(--color-primary);">🔄</span>
+                                    <span class="pt-0.5">Maintain active certification through annual recertification and continued professional learning</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Acknowledgment and Quote Footer (Preserved) -->
+        <footer class="mt-16 pt-10 border-t-2 border-gray-300">
+            <div class="card p-8 rounded-2xl md:flex md:justify-between md:items-start">
+                <div class="md:w-2/3">
+                    <h4 class="text-3xl font-extrabold mb-4" style="color: var(--color-secondary);">Acknowledgment Form</h4>
+                    <p class="text-xl text-gray-700 mb-6">
+                        Before continuing, please confirm you have read and understood:
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 ml-4 text-gray-600 font-medium">
+                        <li>Technical requirements and weekly commitment</li>
+                        <li>Certification criteria and program flow</li>
+                        <li>Community and ethics expectations</li>
+                    </ul>
+
+                    <div class="mt-8 flex items-center p-5 rounded-xl border-2" style="border-color: var(--color-primary); background-color: rgba(0, 123, 255, 0.05);">
+                        <input type="checkbox" id="acknowledge" class="h-6 w-6 mr-4 rounded transition duration-200" style="accent-color: var(--color-accent);">
+                        <label for="acknowledge" class="text-xl font-extrabold text-gray-900 select-none">
+                            "I acknowledge that I meet the program requirements and agree to actively participate in the Certified STEM AI Architect™ Program."
+                        </label>
+                    </div>
+                </div>
+
+                <div class="md:w-1/3 mt-10 md:mt-0 md:pl-8">
+                    <div class="border-l-4 pl-4 py-2" style="border-color: var(--color-pop);">
+                        <p class="text-xl italic text-gray-700">
+                            "Every great AI teacher starts not with tools, but with clarity.
+                        </p>
+                        <p class="text-xl mt-3" style="color: var(--color-primary);">
+                            Review your time and tech setup now — so your energy can focus on creativity later."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript for Accordion Functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const triggers = document.querySelectorAll('.accordion-trigger');
+
+            triggers.forEach(trigger => {
+                const targetId = trigger.getAttribute('data-target');
+                const iconId = trigger.getAttribute('data-icon');
+                const content = document.getElementById(targetId);
+                const icon = document.getElementById(iconId);
+
+                // Initialize state: All collapsed by default
+                content.classList.add('collapsed');
+                icon.classList.remove('rotate-90-active');
+                icon.classList.add('rotate-0-inactive');
+
+                trigger.addEventListener('click', () => {
+                    // Toggle content visibility
+                    const isCollapsed = content.classList.toggle('collapsed');
+                    
+                    // Toggle icon rotation
+                    if (isCollapsed) {
+                        icon.classList.remove('rotate-90-active');
+                        icon.classList.add('rotate-0-inactive');
+                        icon.textContent = '▼';
+                    } else {
+                        icon.classList.add('rotate-90-active');
+                        icon.classList.remove('rotate-0-inactive');
+                        icon.textContent = '▲';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
