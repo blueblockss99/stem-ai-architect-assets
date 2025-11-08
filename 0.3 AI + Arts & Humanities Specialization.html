@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI + Arts & Humanities Specialization</title>
+    <!-- Load Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfcf5; /* Very light cream/yellow background for an artistic feel */
+        }
+        /* Custom Colors based on STEM AI Studio Palette */
+        .text-stem-purple { color: #9B30FF; }
+        .bg-stem-purple { background-color: #9B30FF; }
+        .text-stem-blue { color: #007BFF; }
+        .bg-stem-blue { background-color: #007BFF; }
+        /* Accent Color: Gold #FFD700 */
+        .text-stem-gold { color: #FFD700; }
+        .bg-stem-gold { background-color: #FFD700; }
+        .border-stem-gold { border-color: #FFD700; }
+        /* Secondary Accents */
+        .text-stem-pink { color: #FF69B4; }
+        .text-stem-teal { color: #00A3A3; }
+        
+        .hover-lift:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+
+    <script>
+        // Tailwind Configuration for easy color access
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'stem-blue': '#007BFF',
+                        'stem-purple': '#9B30FF',
+                        'stem-gold': '#FFD700',
+                        'stem-pink': '#FF69B4',
+                        'stem-teal': '#00A3A3',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased text-gray-900">
+
+    <div id="app" class="max-w-6xl mx-auto p-4 sm:p-6 lg:p-10">
+
+        <!-- Header Block: AI + Arts & Humanities -->
+        <header class="bg-gradient-to-r from-stem-blue to-stem-purple text-white p-8 sm:p-12 rounded-3xl shadow-2xl mb-12">
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight flex items-center">
+                <!-- SVG: Open Book (Symbol for Humanities) -->
+                <svg class="w-6 h-6 sm:w-8 sm:h-8 mr-3 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21.5c-3.314 0-6-2.015-6-4.5s2.686-4.5 6-4.5 6 2.015 6 4.5-2.686 4.5-6 4.5z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M18 17c0 2.485-2.686 4.5-6 4.5S6 19.485 6 17m0 0V7c0-2.485 2.686-4.5 6-4.5s6 2.015 6 4.5v10"></path></svg>
+                AI + Arts & Humanities Specialization
+            </h1>
+            <p class="mt-3 text-xl sm:text-2xl font-light opacity-90">
+                Where Creativity, Culture, and Algorithms Intersect
+            </p>
+        </header>
+
+        <!-- Section: Who This Path Is For -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-800 mb-6 border-b-4 border-stem-gold pb-2 flex items-center">
+                 <!-- SVG: Compass (for Who This Path Is For) -->
+                <svg class="w-8 h-8 mr-3 text-stem-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                Who This Path Is For
+            </h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Card 1: Educators -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-pink transition duration-300 hover-lift">
+                    <p class="font-black text-xl text-stem-pink mb-2">Educators & Scholars</p>
+                    <p class="text-sm text-gray-700">Educators in visual arts, language, social sciences, or media studies.</p>
+                </div>
+                <!-- Card 2: Creatives -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-gold transition duration-300 hover-lift">
+                    <p class="font-black text-xl text-stem-gold mb-2">Creatives & Designers</p>
+                    <p class="text-sm text-gray-700">Creatives and designers exploring AI as a co-creator in art, writing, and storytelling.</p>
+                </div>
+                <!-- Card 3: Mentors -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-stem-teal transition duration-300 hover-lift">
+                    <p class="font-black text-xl text-stem-teal mb-2">Humanities Mentors</p>
+                    <p class="text-sm text-gray-700">Mentors who want to help students critically explore AI’s cultural and ethical impact.</p>
+                </div>
+            </div>
+            <p class="mt-6 text-base italic text-gray-600 border-l-4 border-stem-gold pl-4 bg-yellow-50/50 p-3 rounded-lg">
+                Ideal participants are those who see AI not just as a tool — but as a collaborator that amplifies human imagination. This specialization empowers educators to blend creativity with computation, teaching how AI can paint, write, compose, and converse — while still reflecting human values and emotion.
+            </p>
+        </section>
+
+        <!-- Section: What You'll Learn (Skills & Outcomes) -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-800 mb-6 border-b-4 border-stem-pink pb-2 flex items-center">
+                 <!-- SVG: Target (for What You'll Learn) -->
+                <svg class="w-8 h-8 mr-3 text-stem-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10l3-3m0 0l3 3m-3-3v11.5a.5.5 0 00.5.5h15a.5.5 0 00.5-.5V10m-3-3V6a2 2 0 00-2-2H8a2 2 0 00-2 2v1"></path></svg>
+                What You’ll Learn
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- SKILLS -->
+                <div>
+                    <h3 class="text-xl font-bold text-stem-pink mb-3">Core Skill Focus</h3>
+                    <ul class="space-y-3">
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-pink">
+                            <span class="flex-shrink-0 text-stem-pink mr-3 mt-1">•</span>
+                            <p class="text-sm text-gray-700">Integrate AI-generated art, music, and storytelling into creative learning experiences.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-pink">
+                            <span class="flex-shrink-0 text-stem-pink mr-3 mt-1">•</span>
+                            <p class="text-sm text-gray-700">Facilitate discussions around ethics, authorship, and digital identity.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-pink">
+                            <span class="flex-shrink-0 text-stem-pink mr-3 mt-1">•</span>
+                            <p class="text-sm text-gray-700">Use AI tools for visual design, creative writing, and media production.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-pink">
+                            <span class="flex-shrink-0 text-stem-pink mr-3 mt-1">•</span>
+                            <p class="text-sm text-gray-700">Apply prompt engineering and narrative design to guide responsible creative expression.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-pink">
+                            <span class="flex-shrink-0 text-stem-pink mr-3 mt-1">•</span>
+                            <p class="text-sm text-gray-700">Build a classroom environment where students become digital creators, not just consumers.</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- OUTCOMES -->
+                <div>
+                    <h3 class="text-xl font-bold text-stem-teal mb-3">Key Learning Outcomes</h3>
+                    <ul class="space-y-3">
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-teal">
+                            <span class="flex-shrink-0 text-stem-teal mr-3 mt-1">✓</span>
+                            <p class="text-sm text-gray-700">Design lessons that combine creativity, empathy, and AI literacy.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-teal">
+                            <span class="flex-shrink-0 text-stem-teal mr-3 mt-1">✓</span>
+                            <p class="text-sm text-gray-700">Explore AI’s role in representation, bias, and aesthetics.</p>
+                        </li>
+                        <li class="p-3 bg-white rounded-lg shadow-md flex items-start border-l-4 border-stem-teal">
+                            <span class="flex-shrink-0 text-stem-teal mr-3 mt-1">✓</span>
+                            <p class="text-sm text-gray-700">Showcase student projects that merge human vision with machine imagination.</p>
+                        </li>
+                    </ul>
+                    <p class="mt-6 text-sm italic text-gray-500 bg-gray-50 p-3 rounded-lg">
+                        You will emerge as a leader capable of blending creativity with computation.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Capstones & Mini-Labs (Vibrant Cards) -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-extrabold text-gray-800 mb-6 border-b-4 border-stem-gold pb-2 flex items-center">
+                <!-- SVG: Puzzle (for Capstones) -->
+                <svg class="w-8 h-8 mr-3 text-stem-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 100 4 2 2 0 000-4zM19 12a2 2 0 100-4 2 2 0 000 4zM12 20a2 2 0 100-4 2 2 0 000 4zM5 12a2 2 0 100-4 2 2 0 000 4z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v2.5M19 8h-2.5M12 20v-2.5M5 8h2.5M17 12h-2.5M7 12H9.5M14 8.5L12 10l-2-1.5M12 14v2.5"></path></svg>
+                Capstone & Mini-Lab Projects
+            </h2>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Capstones -->
+                <div class="p-6 rounded-xl shadow-2xl bg-white border-t-8 border-stem-gold">
+                    <h3 class="text-2xl font-bold text-stem-gold mb-4 flex items-center">
+                         <!-- SVG: Image/Gallery (for Capstones) -->
+                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-2-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        Sample Capstones
+                    </h3>
+                    <div class="space-y-4">
+                        <!-- Capstone Item 1: Art -->
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-stem-gold/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base flex items-center">
+                                <!-- SVG: Paintbrush -->
+                                <svg class="w-4 h-4 mr-2 text-stem-gold inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16V4a2 2 0 012-2h6a2 2 0 012 2v12m-6-8h4m-4 4h4m-4 4h4m-4 4h4M3 21h18"></path></svg>
+                                “The Human Touch” Gallery
+                            </p>
+                            <p class="text-xs text-gray-600 mt-1">Students create an AI-generated art exhibit exploring emotion, culture, and style. <span class="font-medium text-stem-gold">(AI Focus: Image generation & style transfer)</span></p>
+                        </div>
+                        <!-- Capstone Item 2: Storytelling -->
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-stem-gold/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base flex items-center">
+                                <!-- SVG: Book Open (Story) -->
+                                <svg class="w-4 h-4 mr-2 text-stem-gold inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 2h-8a4 4 0 00-4 4v16a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2zM10 6h8"></path></svg>
+                                StoryWeaver
+                            </p>
+                            <p class="text-xs text-gray-600 mt-1">An interactive story written collaboratively by students and ChatGPT — exploring ethical dilemmas or cultural narratives. <span class="font-medium text-stem-gold">(AI Focus: Generative text & storytelling)</span></p>
+                        </div>
+                        <!-- Capstone Item 3: Dialogue/Roleplay -->
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-stem-gold/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base flex items-center">
+                                <!-- SVG: Speech Bubble (Dialogue) -->
+                                <svg class="w-4 h-4 mr-2 text-stem-gold inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20.94 11H3.06M20.94 11c0 3.3-3.08 6-6.87 6-3.79 0-6.87-2.7-6.87-6s3.08-6 6.87-6c3.79 0 6.87 2.7 6.87 6z"></path></svg>
+                                AI Persona Dialogues
+                            </p>
+                            <p class="text-xs text-gray-600 mt-1">Students train character prompts and record simulated interviews with historical or fictional figures. <span class="font-medium text-stem-gold">(AI Focus: Conversational AI & role simulation)</span></p>
+                        </div>
+                        <!-- Capstone Item 4: Music -->
+                        <div class="bg-yellow-50 p-4 rounded-lg border border-stem-gold/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base flex items-center">
+                                <!-- SVG: Music Note -->
+                                <svg class="w-4 h-4 mr-2 text-stem-gold inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 18V5l11-4v13M9 18c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"></path></svg>
+                                Synesthetic Soundscapes
+                            </p>
+                            <p class="text-xs text-gray-600 mt-1">Students generate music inspired by visual themes or data-driven emotion analysis. <span class="font-medium text-stem-gold">(AI Focus: Audio synthesis & multimodal creativity)</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mini-Labs -->
+                <div class="p-6 rounded-xl shadow-2xl bg-white border-t-8 border-stem-pink">
+                    <h3 class="text-2xl font-bold text-stem-pink mb-4 flex items-center">
+                        <!-- SVG: Lightbulb (for Mini-Labs) -->
+                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 14.65c-.34-.41-.58-.88-.74-1.37-.16-.49-.24-1.02-.24-1.55 0-1.77.67-3.41 1.77-4.68l.01-.01c1.1-1.27 1.77-2.91 1.77-4.68 0-3.3-2.7-6-6-6s-6 2.7-6 6c0 1.77.67 3.41 1.77 4.68l.01.01c1.1 1.27 1.77 2.91 1.77 4.68 0 .53-.08 1.06-.24 1.55-.16.49-.4.96-.74 1.37"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 22c-3.3 0-6-2.7-6-6h12c0 3.3-2.7 6-6 6z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 18v4"></path></svg>
+                        Starter Mini-Labs
+                    </h3>
+                    <div class="space-y-4">
+                         <!-- Mini-Lab Item 1: Art Style -->
+                        <div class="bg-pink-50 p-4 rounded-lg border border-stem-pink/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base flex items-center">
+                                <!-- SVG: Paintbrush -->
+                                <svg class="w-4 h-4 mr-2 text-stem-pink inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 16V4a2 2 0 012-2h6a2 2 0 012 2v12m-6-8h4m-4 4h4m-4 4h4m-4 4h4M3 21h18"></path></svg>
+                                Style Remix Studio
+                            </p>
+                            <p class="text-xs text-gray-600 mt-1">Tool: Canva + Runway ML. Focus: Experiment with reimagining art styles using AI filters.</p>
+                        </div>
+                        <!-- Mini-Lab Item 2: Writing -->
+                        <div class="bg-pink-50 p-4 rounded-lg border border-stem-pink/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base flex items-center">
+                                <!-- SVG: Pen/Edit -->
+                                <svg class="w-4 h-4 mr-2 text-stem-pink inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"></path><path stroke-linecap="round" stroke-linejoin="round" d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                Creative Prompt Jam
+                            </p>
+                            <p class="text-xs text-gray-600 mt-1">Tool: ChatGPT + Canva. Focus: Generate story ideas or poems using creative prompt engineering.</p>
+                        </div>
+                        <!-- Mini-Lab Item 3: Bias/Group -->
+                        <div class="bg-pink-50 p-4 rounded-lg border border-stem-pink/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base flex items-center">
+                                <!-- SVG: Users/Group -->
+                                <svg class="w-4 h-4 mr-2 text-stem-pink inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><path stroke-linecap="round" stroke-linejoin="round" d="M9 3a4 4 0 100 8 4 4 0 000-8z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M23 21v-2a4 4 0 00-3-3.75"></path><path stroke-linecap="round" stroke-linejoin="round" d="M20 5.07L19 5.07"></path></svg>
+                                Bias in Portraits
+                            </p>
+                            <p class="text-xs text-gray-600 mt-1">Tool: DALL·E + Discussion Cards. Focus: Explore bias in generated human portraits and discuss representation.</p>
+                        </div>
+                        <!-- Mini-Lab Item 4: Audio/Headphones -->
+                        <div class="bg-pink-50 p-4 rounded-lg border border-stem-pink/50 hover-lift transition duration-300">
+                            <p class="font-bold text-gray-800 text-base flex items-center">
+                                <!-- SVG: Headphones -->
+                                <svg class="w-4 h-4 mr-2 text-stem-pink inline" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 18v-6a9 9 0 0118 0v6"></path><path stroke-linecap="round" stroke-linejoin="round" d="M21 19a2 2 0 01-2 2H5a2 2 0 01-2-2v-1a2 2 0 012-2h14a2 2 0 012 2v1z"></path></svg>
+                                Data-to-Music
+                            </p>
+                            <p class="text-xs text-gray-600 mt-1">Tool: Google MusicLM / Runway ML. Focus: Turn emotion words or text prompts into soundscapes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-6 text-sm italic text-gray-500 text-center">
+                Every capstone and mini-lab integrates creative production with critical reflection, ensuring that students question as much as they create.
+            </p>
+        </section>
+
+        <!-- Section: Tool Stack & Data/Ethics -->
+        <section class="mb-12">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Tool Stack -->
+                <div class="lg:col-span-2 bg-white p-6 rounded-xl shadow-lg border-t-8 border-stem-blue">
+                    <h3 class="text-2xl font-bold text-stem-blue mb-4 flex items-center">
+                         <!-- SVG: Tool Stack (for Tool Stack) -->
+                        <svg class="w-6 h-6 mr-3 text-stem-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"></path></svg>
+                        Core Tool Stack
+                    </h3>
+                    <div class="grid grid-cols-2 gap-y-3 gap-x-6 text-sm">
+                        <div>
+                            <p class="text-base font-semibold text-stem-purple">No-Code AI:</p>
+                            <p>ChatGPT, DALL·E, Runway ML</p>
+                            <p class="text-xs text-gray-500">(Leonardo.ai, Midjourney for demos only)</p>
+                        </div>
+                        <div>
+                            <p class="text-base font-semibold text-stem-purple">Design & Media:</p>
+                            <p>Canva, Scratch (for interactive art)</p>
+                            <p class="text-xs text-gray-500">(Figma, Soundraw, Pika Labs)</p>
+                        </div>
+                        <div class="col-span-2">
+                            <p class="text-base font-semibold text-stem-purple">Data & Visualization:</p>
+                            <p>Datawrapper, Tableau Public, Google Arts & Culture (datasets)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data & Ethics -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-8 border-stem-teal">
+                    <h3 class="text-2xl font-bold text-stem-teal mb-4 flex items-center">
+                        <!-- SVG: Shield (for Data & Ethics) -->
+                        <svg class="w-6 h-6 mr-3 text-stem-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.602 4.4l-3.3-3.3m0 0l-3.3-3.3m3.3 3.3L8 16"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 009-9v-3.879a4 4 0 00-1.171-2.828L12 3l-7.828 7.3A4 4 0 003 12.121V12a9 9 0 009 9z"></path></svg>
+                        Data & Ethics Rules
+                    </h3>
+                    <ul class="list-disc ml-4 space-y-1 text-sm text-gray-700">
+                        <li>Use only copyright-free or AI-generated content for classroom projects.</li>
+                        <li>Teach authorship and attribution in AI-assisted works.</li>
+                        <li>Encourage reflection on bias, originality, and human intent in creative outputs.</li>
+                        <li>Discuss AI’s cultural impact — from deepfakes to digital storytelling.</li>
+                        <li>Emphasize AI as a co-creator, not a replacement.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Mentorship & Outcome -->
+        <section class="mb-12">
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Mentorship Note -->
+                <div class="bg-stem-purple/10 p-6 rounded-xl shadow-lg border-l-8 border-stem-purple">
+                    <h3 class="text-2xl font-bold text-stem-purple mb-3 flex items-center">
+                        <!-- SVG: Curation (for SME Checkpoints) -->
+                        <svg class="w-6 h-6 mr-3 text-stem-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        SME Checkpoints & Mentorship
+                    </h3>
+                    <p class="text-sm text-gray-700 font-bold mb-3">SME Review Focus:</p>
+                    <ul class="list-disc ml-4 space-y-1 text-xs text-gray-600">
+                        <li>Curation Feedback: Guidance on project theme, artistic intent, and narrative framing.</li>
+                        <li>Ethics Review: Ensuring responsible representation and cultural sensitivity.</li>
+                        <li>Portfolio Review: Evaluating creativity, coherence, and reflective depth.</li>
+                    </ul>
+                    <p class="text-xs mt-3 italic text-gray-500">Mentors model creative pedagogy, helping educators balance technology, empathy, and imagination in their teaching practice.</p>
+                </div>
+
+                <!-- Outcome & Portfolio -->
+                <div class="bg-stem-gold/10 p-6 rounded-xl shadow-lg border-l-8 border-stem-gold">
+                    <h3 class="text-2xl font-bold text-stem-gold mb-3 flex items-center">
+                        <!-- SVG: Credential/Checkmark (for Outcome) -->
+                        <svg class="w-6 h-6 mr-3 text-stem-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.602 4.4l-3.3-3.3m0 0l-3.3-3.3m3.3 3.3L8 16"></path><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9 9 0 009-9v-3.879a4 4 0 00-1.171-2.828L12 3l-7.828 7.3A4 4 0 003 12.121V12a9 9 0 009 9z"></path></svg>
+                        Outcome & Portfolio
+                    </h3>
+                    <p class="text-sm text-gray-700">
+                        Participants produce an AI-powered creative capstone blending art and analytics. They earn the AI + Arts & Humanities Specialist Credential and build a showcase portfolio including mini-labs and one signature creative project.
+                    </p>
+                    <p class="text-sm mt-3 font-semibold text-stem-gold">
+                        Graduates emerge as AI Creativity Mentors.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer Note (Appealing Design) -->
+        <footer class="mt-12 p-8 sm:p-10 rounded-2xl bg-gradient-to-r from-stem-blue to-stem-purple text-white text-center shadow-2xl">
+            <p class="text-lg sm:text-xl font-light opacity-90">Certified STEM AI Architect™</p>
+            <p class="text-3xl sm:text-4xl font-extrabold tracking-wider mt-1 mb-3">AI + Arts & Humanities Specialization</p>
+            <p class="text-base italic font-medium">Train to Teach & Lead Cross-Domain AI Education</p>
+            <p class="text-xs mt-4 opacity-70">Where Computer Science meets Medicine, Engineering, Business & the Arts.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
