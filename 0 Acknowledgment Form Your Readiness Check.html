@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 0 Completion & Readiness Check</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Using the theme gradient from the previous quiz */
+            background-image: linear-gradient(135deg, #007BFF, #9B30FF); 
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        .text-stem-blue { color: #007BFF; }
+        .text-stem-purple { color: #9B30FF; }
+        .check-card {
+            background-color: #FFFFFF;
+            border-radius: 1.5rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2), 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .progress-bar {
+            height: 10px;
+            border-radius: 5px;
+            background-color: #e5e7eb; /* Gray-200 */
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 5px;
+            background-color: #FFD700; /* Gold */
+            transition: width 0.5s ease-out;
+        }
+        .checklist-item {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .checklist-item:hover {
+            background-color: #f9fafb;
+        }
+        /* Custom checkbox style (hidden default, styled container) */
+        .custom-checkbox {
+            appearance: none;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 2px solid #FFD700;
+            border-radius: 0.375rem;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        .custom-checkbox:checked {
+            background-color: #FFD700;
+            border-color: #FFD700;
+        }
+        .custom-checkbox:checked::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #333;
+            font-size: 1rem;
+            font-weight: 900;
+        }
+        .btn-unlock {
+            background-color: #FFD700;
+            color: #333;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
+        }
+        .btn-unlock:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(255, 215, 0, 0.7);
+        }
+        .btn-unlock:disabled {
+            background-color: #ccc;
+            color: #777;
+            cursor: not-allowed;
+            box-shadow: none;
+            opacity: 0.8;
+        }
+        .section-header {
+            border-bottom: 2px solid #eee;
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8 flex justify-center items-start">
+
+    <div id="module-container" class="check-card w-full max-w-3xl p-6 sm:p-10 my-10">
+
+        <!-- HEADER AND INTRODUCTION -->
+        <h1 class="text-4xl font-extrabold text-stem-purple mb-4">
+            Module 0 Complete!
+        </h1>
+        <p class="text-xl font-medium text-gray-700 mb-8 border-b pb-4">
+            Congratulations — you’ve officially reached the end of Module 0: Orientation – Welcome to STEM AI Studio!
+        </p>
+        
+        <p class="text-base text-gray-600 mb-6">
+            You’ve explored the vision behind the Certified STEM AI Architect™ Program, discovered your AI Mentor Persona, and reviewed the expectations for earning your certification.
+        </p>
+
+        <!-- PROGRESS BAR (MOVED TO START) -->
+        <div class="mb-10 pb-6 border-b-2 border-dashed border-gray-300">
+            <h2 class="text-xl font-bold text-gray-800 mb-3">Orientation Completion Status</h2>
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill" style="width: 0%;"></div>
+            </div>
+            <p id="progress-text" class="text-sm text-gray-500 mt-1 font-semibold">0% Complete</p>
+        </div>
+
+
+        <!-- ACKNOWLEDGMENT FORM -->
+        <section>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-4 border-stem-purple pb-2">Acknowledgment Form: Your Readiness Check</h2>
+            <p class="text-base text-gray-700 mb-6">
+                Before continuing, please confirm that you have read, understood, and completed the key items below. This short acknowledgment ensures you’re technically prepared, understand the certification flow, and have joined our learning community.
+            </p>
+
+            <!-- SECTION 1: TECHNICAL READINESS -->
+            <div class="mb-8 p-5 rounded-xl border border-gray-200 bg-gray-50">
+                <h3 class="text-xl font-bold text-gray-800 mb-3 section-header pb-2">Technical Readiness & Time Commitment</h3>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700 mb-5">
+                    <li>I have access to a laptop or desktop (8 GB RAM or greater) with stable internet.</li>
+                    <li>I can dedicate approximately 10 hours per week to the program.</li>
+                    <li>I can attend all 9 required and optional live Studio Lessons.</li>
+                    <li>I have created free accounts for ChatGPT, Teachable Machine, Canva, and Scratch (or equivalent tools).</li>
+                </ul>
+                <div class="flex items-center">
+                    <input type="checkbox" id="readiness_tech" class="custom-checkbox mt-1 mr-3 min-w-[1.5rem]" data-section="acknowledgment">
+                    <label for="readiness_tech" class="font-bold text-green-700">
+                        Yes, I meet the technical requirements and weekly commitment.
+                    </label>
+                </div>
+            </div>
+
+            <!-- SECTION 2: CERTIFICATION CRITERIA -->
+            <div class="mb-8 p-5 rounded-xl border border-gray-200 bg-gray-50">
+                <h3 class="text-xl font-bold text-gray-800 mb-3 section-header pb-2">Certification Criteria & Program Flow</h3>
+                <p class="text-gray-700 mb-3">I understand that to be certified as a STEM AI Architect™™, I must:</p>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700 mb-5 text-sm">
+                    <li>Complete Modules 0–6 and all required quizzes and activities.</li>
+                    <li>Build and upload two micro AI demos (Module 3).</li>
+                    <li>Teach at least three demo classes (live or recorded).</li>
+                    <li>Receive at least one structured peer review on a demo class.</li>
+                    <li>Submit my final capstone lesson pack (Module 5).</li>
+                    <li>Receive dual approval from an AI Architect and SME.</li>
+                    <li>Submit the AI Ethics Pledge and final certification form (Module 6).</li>
+                    <li>Maintain active status through annual recertification and professional growth.</li>
+                </ul>
+                <div class="flex items-center">
+                    <input type="checkbox" id="readiness_cert" class="custom-checkbox mt-1 mr-3 min-w-[1.5rem]" data-section="acknowledgment">
+                    <label for="readiness_cert" class="font-bold text-green-700">
+                        Yes, I have reviewed and understand the certification criteria and program flow.
+                    </label>
+                </div>
+            </div>
+
+            <!-- SECTION 3: COMMUNITY & ETHICS -->
+            <div class="mb-8 p-5 rounded-xl border border-gray-200 bg-gray-50">
+                <h3 class="text-xl font-bold text-gray-800 mb-3 section-header pb-2">Community & Ethics Expectations</h3>
+                <p class="text-gray-700 mb-3">I agree to:</p>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700 mb-5 text-sm">
+                    <li>Follow the STEM AI Studio Code of Conduct and AI Ethics Pledge.</li>
+                    <li>Create a safe, inclusive learning environment for all participants.</li>
+                    <li>Respect privacy and confidentiality when working with student data or projects.</li>
+                    <li>Uphold kindness, constructive feedback, and empathy in community discussions and peer reviews.</li>
+                    <li>Introduce myself in the Orientation Discussion Forum and welcome at least one peer.</li>
+                </ul>
+                <div class="flex items-center">
+                    <input type="checkbox" id="readiness_community" class="custom-checkbox mt-1 mr-3 min-w-[1.5rem]" data-section="acknowledgment">
+                    <label for="readiness_community" class="font-bold text-green-700">
+                        Yes, I understand and accept the community and ethics expectations.
+                    </label>
+                </div>
+            </div>
+            
+            <!-- ACTION CHECKLIST (MOVED TO END) -->
+            <div class="mb-10 p-5 bg-blue-50 border-l-4 border-stem-blue rounded-lg pt-6 border-t-2 border-dashed border-gray-300">
+                <h2 class="text-2xl font-bold text-stem-blue mb-4">To Complete Module 0 (Required Actions)</h2>
+                <div class="space-y-4">
+                    
+                    <div class="flex items-start checklist-item p-3 rounded-lg">
+                        <input type="checkbox" id="action1" class="custom-checkbox mt-1 mr-3 min-w-[1.5rem]" data-section="quick-action">
+                        <label for="action1" class="flex flex-col text-gray-800 leading-snug flex-grow">
+                            <span class="font-semibold">Complete the “Discover Your Inner AI Mentor Type” Quiz.</span>
+                            <span class="text-sm text-gray-500">Reflect on which path—Empath, Builder, Strategist, or Visionary—resonates with you most.</span>
+                        </label>
+                    </div>
+
+                    <div class="flex items-start checklist-item p-3 rounded-lg">
+                        <input type="checkbox" id="action2" class="custom-checkbox mt-1 mr-3 min-w-[1.5rem]" data-section="quick-action">
+                        <label for="action2" class="flex flex-col text-gray-800 leading-snug flex-grow">
+                            <span class="font-semibold">Introduce yourself in the Orientation Discussion Forum.</span>
+                            <span class="text-sm text-gray-500">Share a short welcome message and reply to at least one peer’s post.</span>
+                        </label>
+                    </div>
+
+                    <div class="flex items-start checklist-item p-3 rounded-lg">
+                        <input type="checkbox" id="action3" class="custom-checkbox mt-1 mr-3 min-w-[1.5rem]" data-section="quick-action">
+                        <label for="action3" class="flex flex-col text-gray-800 leading-snug flex-grow">
+                            <span class="font-semibold">Submit your Acknowledgment Form: Your Readiness Check.</span>
+                            <span class="text-sm text-gray-500">Confirm that you’ve reviewed the requirements, criteria, and expectations below.</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FINAL ACKNOWLEDGMENT -->
+            <div class="mt-10 pt-6 border-t-2 border-dashed border-gray-300">
+                <h3 class="text-2xl font-extrabold text-gray-900 mb-4">Final Acknowledgment</h3>
+                <p class="text-lg text-gray-700 mb-6">
+                    I have read and understood the program expectations above and have completed all orientation steps. I’m ready to begin my journey as a Certified STEM AI Architect™ Candidate.
+                </p>
+
+                <button id="final-acknowledge-btn" 
+                        class="btn-unlock w-full text-xl py-3 rounded-xl shadow-lg disabled:opacity-50 disabled:cursor-not-allowed" 
+                        disabled>
+                    <span id="button-text">Acknowledge & Unlock Module 1</span>
+                </button>
+
+                <div id="unlock-message" class="mt-6 p-4 text-center bg-green-100 text-green-800 border border-green-300 rounded-lg hidden">
+                    <p class="font-extrabold text-xl">Module 1 is Unlocked!</p>
+                    <p class="mt-1">Welcome to the Studio — we can’t wait to see your creativity in action!</p>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <script>
+        const QUICK_ACTION_CHECKBOXES = document.querySelectorAll('input[data-section="quick-action"]');
+        const ACKNOWLEDGMENT_CHECKBOXES = document.querySelectorAll('input[data-section="acknowledgment"]');
+        const ALL_CHECKBOXES = document.querySelectorAll('input[type="checkbox"]');
+        const PROGRESS_FILL = document.getElementById('progress-fill');
+        const PROGRESS_TEXT = document.getElementById('progress-text');
+        const FINAL_ACKNOWLEDGE_BTN = document.getElementById('final-acknowledge-btn');
+        const BUTTON_TEXT = document.getElementById('button-text');
+        const UNLOCK_MESSAGE = document.getElementById('unlock-message');
+
+        const TOTAL_ACTIONS = QUICK_ACTION_CHECKBOXES.length + ACKNOWLEDGMENT_CHECKBOXES.length;
+
+        function updateProgress() {
+            let checkedCount = 0;
+            ALL_CHECKBOXES.forEach(checkbox => {
+                if (checkbox.checked) {
+                    checkedCount++;
+                }
+            });
+
+            const progress = (checkedCount / TOTAL_ACTIONS) * 100;
+            PROGRESS_FILL.style.width = `${progress}%`;
+            PROGRESS_TEXT.textContent = `${Math.round(progress)}% Complete (${checkedCount} of ${TOTAL_ACTIONS} steps acknowledged)`;
+
+            // Check if all acknowledgment checkboxes are checked
+            let allAcknowledged = true;
+            ACKNOWLEDGMENT_CHECKBOXES.forEach(checkbox => {
+                if (!checkbox.checked) {
+                    allAcknowledged = false;
+                }
+            });
+
+            // Enable or disable the final button
+            if (allAcknowledged) {
+                FINAL_ACKNOWLEDGE_BTN.disabled = false;
+                BUTTON_TEXT.textContent = 'Acknowledge & Unlock Module 1';
+            } else {
+                FINAL_ACKNOWLEDGE_BTN.disabled = true;
+                BUTTON_TEXT.textContent = 'Acknowledge & Unlock Module 1 (3 Sections Required)';
+                UNLOCK_MESSAGE.classList.add('hidden');
+            }
+        }
+
+        function handleFinalAcknowledge() {
+            if (FINAL_ACKNOWLEDGE_BTN.disabled) {
+                return;
+            }
+
+            // Simulate "unlocking" Module 1
+            UNLOCK_MESSAGE.classList.remove('hidden');
+            FINAL_ACKNOWLEDGE_BTN.disabled = true;
+            FINAL_ACKNOWLEDGE_BTN.textContent = 'Module 1 Successfully Unlocked!';
+            FINAL_ACKNOWLEDGE_BTN.classList.remove('btn-unlock');
+            FINAL_ACKNOWLEDGE_BTN.classList.add('bg-green-500', 'hover:bg-green-600', 'text-white');
+        }
+
+        // Add event listeners to all checkboxes
+        ALL_CHECKBOXES.forEach(checkbox => {
+            checkbox.addEventListener('change', updateProgress);
+        });
+
+        // Add event listener to the final button
+        FINAL_ACKNOWLEDGE_BTN.addEventListener('click', handleFinalAcknowledge);
+
+        // Initial progress check on load
+        updateProgress();
+
+    </script>
+</body>
+</html>
